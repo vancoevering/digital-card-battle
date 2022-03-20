@@ -1,9 +1,11 @@
 import typing as t
 from dataclasses import dataclass as dc
 
+from . import PKG_ROOT
+
 
 def main():
-    cards = CardFactory.from_json('card-list.json')
+    cards = CardFactory.from_json(PKG_ROOT / 'card-list.json')
     for c in cards:
         print(c)
 
