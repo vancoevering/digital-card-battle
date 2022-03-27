@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-import dc_json as json
-from card import Card, UnitCard, Attack, EffectAttack
+from . import PKG_ROOT, dc_json as json
+from .card import Card, UnitCard, Attack, EffectAttack
 
 
 def main():
@@ -18,7 +18,7 @@ def get_wiki_cards():
 
 
 def write_wiki_cards(cards):
-    with open("card-list.json", "w") as fp:
+    with open(PKG_ROOT / "card-list.json", "w") as fp:
         json.dump(cards, fp, indent=4)
 
 
