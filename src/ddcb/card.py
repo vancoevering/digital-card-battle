@@ -6,8 +6,24 @@ from . import PKG_ROOT
 
 def main():
     cards = CardFactory.from_json(PKG_ROOT / 'card-list.json')
-    for c in cards:
+    CardList.load(cards)
+    for c in CardList.cards:
         print(c)
+    print(CardList.get("gabumon"))
+
+
+class CardList:
+    cards: t.Dict[str, "Card"] = {}
+
+    @classmethod
+    def load(cls, cards: t.Iterable["Card"]):
+        cls.cards = {
+            card.name.lower(): card for card in cards
+        }
+
+    @classmethod
+    def get(cls, name: str):
+        return cls.cards[name.lower()]
 
 
 class CardFactory:
@@ -25,13 +41,13 @@ class CardFactory:
 
     @classmethod
     def from_dict(cls, d):
-        if cls.is_unitcard(d):
+        if cls._is_unitcard(d):
             return UnitCard.from_dict(d)
         else:
             return Card.from_dict(d)
 
     @staticmethod
-    def is_unitcard(d):
+    def _is_unitcard(d):
         return "level" in d
 
 
