@@ -26,6 +26,11 @@ class Field:
         self.unit: t.Optional[UnitCard] = None
         self.dp: "DPStack" = DPStack()
 
+    def draw(self, count=1):
+        for i in range(count):
+            card = self.deck.draw()
+            self.hand.append(card)
+
 
 class DPStack:
     def __init__(self):
@@ -53,6 +58,9 @@ class Deck:
 
     def shuffle(self):
         random.shuffle(self.cards)
+
+    def draw(self):
+        return self.cards.pop()
 
     @classmethod
     def from_json(cls, path):
