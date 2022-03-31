@@ -21,7 +21,7 @@ class Field:
     def __init__(self, deck: "Deck"):
         self.deck: Deck = deck
         self.hand: t.List[Card] = []
-        self.discard: t.List[Card] = []
+        self.discard_pile: t.List[Card] = []
 
         self.unit: t.Optional[UnitCard] = None
         self.dp: "DPStack" = DPStack()
@@ -30,6 +30,14 @@ class Field:
         for i in range(count):
             card = self.deck.draw()
             self.hand.append(card)
+
+    def discard(self, index=0):
+        card = self.hand.pop(index)
+        self.discard_pile.append(card)
+
+    def discard_hand(self):
+        for _ in range(len(self.hand)):
+            self.discard()
 
 
 class DPStack:
