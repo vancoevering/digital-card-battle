@@ -1,5 +1,6 @@
 from dataclasses import dataclass as dc
 
+from .card import UnitCard
 from .field import Field
 
 
@@ -19,11 +20,21 @@ class Battler:
 
     def do_prep_phase(self):
         # Prep Phase
-        # - Draw Cards:hand fills to 4
-        #   > (Confirm:next / View:loop / Mulligan:new cards)
+        while True:
+            # - Draw Cards:hand fills to 4
+            # likely need to catch a deck empty exception here
+            self._draw_til_full()
+
+            #   > (Confirm: next / Mulligan:new cards)
+            if self._confirm_draw():
+                break
+            else:
+                self._discard_hand()
+
         # - Play Unit, if no unit
         #   > (choose unit from hand):if no unit, loss
-        pass
+        if not self._has_unit():
+            self._play_unit()
 
     def do_upgrade_phase(self):
         # Upgrade Phase
@@ -44,9 +55,35 @@ class Battler:
         # - Apply opponent damage
         pass
 
+    def _draw_til_full(self):
+        self.field.draw(4 - len(self.field.hand))
+
+    def _confirm_draw(self):
+        choice = self.controller.choose(["keep hand", "mulligan"])
+        return choice == "keep hand"
+
+    def _discard_hand(self):
+        self.field.discard_hand()
+
+    def _has_unit(self):
+        return bool(self.field.unit)
+
+    def _play_unit(self):
+        units = [card for card in self.field.hand if isinstance(card, UnitCard)]
+        if units:
+            unit = self._choose_unit(units)
+            self.field.unit = unit
+        else:
+            raise Exception("Battler can't play a UNIT!")
+
+    def _choose_unit(self, units: list):
+        return self.controller.choose(units)
+
 
 class BaseController:
-    pass
+    @staticmethod
+    def choose(options: list):
+        return options[0]
 
 
 if __name__ == '__main__':
