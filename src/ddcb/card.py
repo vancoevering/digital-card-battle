@@ -61,6 +61,12 @@ class Card:
     def from_dict(d: dict):
         return Card(**d)
 
+    @staticmethod
+    def find_index_by_name(cards: t.Iterable['Card'], name):
+        for i, card in enumerate(cards):
+            if card.name == name:
+                return i
+
 
 @dc
 class UnitCard(Card):

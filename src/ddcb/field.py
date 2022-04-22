@@ -39,6 +39,32 @@ class Field:
         for _ in range(len(self.hand)):
             self.discard()
 
+    def play_unit(self, unit_name):
+        unit_card = self.pop_unit_from_hand(unit_name)
+        self.unit = unit_card
+
+    def get_units_in_hand(self):
+        return [card for card in self.hand if isinstance(card, UnitCard)]
+
+    def has_unit(self):
+        return bool(self.unit)
+
+    def boost_dp(self, unit_name):
+        unit_card = self.pop_unit_from_hand(unit_name)
+        self.dp.push(unit_card)
+
+    def pop_unit_from_hand(self, name) -> UnitCard:
+        card = self.pop_card_from_hand(name)
+        if isinstance(card, UnitCard):
+            # noinspection PyTypeChecker
+            return card
+        else:
+            raise Exception(f"f{card.name} is not a Unit!")
+
+    def pop_card_from_hand(self, name):
+        i = Card.find_index_by_name(self.hand, name)
+        return self.hand.pop(i)
+
 
 class DPStack:
     def __init__(self):

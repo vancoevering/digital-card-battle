@@ -1,3 +1,5 @@
+import random
+import typing as t
 from dataclasses import dataclass as dc
 
 from .card import UnitCard
@@ -38,8 +40,8 @@ class Battler:
 
     def do_upgrade_phase(self):
         # Upgrade Phase
-        # - Boost DP [opt]
-        #   > (choose unit from hand to add to DPStack)
+
+        self._boost_dp()
         # - Play Upgrade [opt]
         #   > (choose upgrade card from hand to play)
         pass
@@ -59,31 +61,50 @@ class Battler:
         self.field.draw(4 - len(self.field.hand))
 
     def _confirm_draw(self):
-        choice = self.controller.choose(["keep hand", "mulligan"])
+        choice = self._choose(["keep hand", "mulligan"])
         return choice == "keep hand"
 
     def _discard_hand(self):
         self.field.discard_hand()
 
     def _has_unit(self):
-        return bool(self.field.unit)
+        return self.field.has_unit()
 
     def _play_unit(self):
-        units = [card for card in self.field.hand if isinstance(card, UnitCard)]
+        units = self.field.get_units_in_hand()
         if units:
-            unit = self._choose_unit(units)
-            self.field.unit = unit
+            unit_name = self._choose(units)
+            self.field.play_unit(unit_name)
         else:
             raise Exception("Battler can't play a UNIT!")
 
-    def _choose_unit(self, units: list):
-        return self.controller.choose(units)
+    def _boost_dp(self):
+        # - Boost DP [opt]
+        #   > (choose unit from hand to add to DPStack)
+        units = self.field.get_units_in_hand()
+        if units:
+            unit_name = self._choose_opt(units)
+            if unit_name:
+                self.field.boost_dp(unit_name)
+
+    def _choose(self, options: t.Sequence[str]):
+        return self.controller.choose(options)
+
+    def _choose_opt(self, options: t.Sequence[str]):
+        options = list(options) + ["No Selection"]
+        return self._choose(options)
 
 
 class BaseController:
     @staticmethod
-    def choose(options: list):
+    def choose(options: t.Sequence[str]):
         return options[0]
+
+
+class RandomController(BaseController):
+    @staticmethod
+    def choose(options: t.Sequence[str]):
+        return random.choice(options)
 
 
 if __name__ == '__main__':
