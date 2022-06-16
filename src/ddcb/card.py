@@ -5,8 +5,7 @@ from . import PKG_ROOT
 
 
 def main():
-    cards = CardFactory.from_json(PKG_ROOT / 'card-list.json')
-    CardList.load(cards)
+    CardList.load_from_json(PKG_ROOT / "card-list.json")
     for c in CardList.cards:
         print(c)
     print(CardList.get("gabumon"))
@@ -14,6 +13,10 @@ def main():
 
 class CardList:
     cards: t.Dict[str, "Card"] = {}
+
+    @classmethod
+    def load_from_json(cls, path):
+        cls.load(CardFactory.from_json(path))
 
     @classmethod
     def load(cls, cards: t.Iterable["Card"]):
