@@ -1,5 +1,6 @@
 # Project data files
 *.json
+*-deck.txt
 
 # Pycharm
 .idea
