@@ -8,8 +8,7 @@ setup(
     name="ddcb",
     description="A terminal game inspired by the psone classic.",
     long_description=README.read_text(),
-
-    packages=find_packages(where='src'),
+    packages=find_packages(where="src"),
     package_dir={"": "src"},
     include_package_data=True,
     install_requires=[
@@ -17,6 +16,5 @@ setup(
         "beautifulsoup4",
         "lxml",
     ],
-
     author="Taylor VanCoevering",
 )

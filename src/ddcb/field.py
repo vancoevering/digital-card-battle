@@ -6,7 +6,7 @@ from .card import Card, UnitCard, CardList, CardFactory
 
 
 def main():
-    cards = CardFactory.from_json(PKG_ROOT / 'card-list.json')
+    cards = CardFactory.from_json(PKG_ROOT / "card-list.json")
     CardList.load(cards)
 
     deck = Deck.from_json(PKG_ROOT / "tutorial-deck.json")
@@ -17,7 +17,6 @@ def main():
 
 
 class Field:
-
     def __init__(self, deck: "Deck"):
         self.deck: Deck = deck
         self.hand: t.List[Card] = []
@@ -99,6 +98,7 @@ class Deck:
     @classmethod
     def from_json(cls, path):
         import json
+
         with open(path, "r") as fp:
             names = json.load(fp)
         return cls.from_names(names)
@@ -109,5 +109,5 @@ class Deck:
         return Deck(cards)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

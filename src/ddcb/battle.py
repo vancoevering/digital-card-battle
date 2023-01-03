@@ -12,11 +12,11 @@ def main():
 
     player_one = Battler(
         field=Field(Deck.from_json(PKG_DATA / "tutorial-deck.json")),
-        controller=RandomController()
+        controller=RandomController(),
     )
     player_two = Battler(
         field=Field(Deck.from_json(PKG_DATA / "go-go-dinosaur-deck.json")),
-        controller=RandomController()
+        controller=RandomController(),
     )
     player_one.battle(player_two)
     pass
@@ -152,11 +152,7 @@ class Battler:
         return self._choose(options)
 
     def _choose_attack(self):
-        options = [
-            self.field.unit.C_STR,
-            self.field.unit.T_STR,
-            self.field.unit.X_STR
-        ]
+        options = [self.field.unit.C_STR, self.field.unit.T_STR, self.field.unit.X_STR]
         return self._choose(options)
 
     def _choose_card(self):
@@ -180,5 +176,5 @@ class RandomController(BaseController):
         return random.choice(options)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

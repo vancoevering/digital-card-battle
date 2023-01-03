@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from . import PKG_ROOT, dc_json as json
+from . import PKG_DATA, dc_json as json
 from .card import Card, UnitCard, Attack, EffectAttack
 
 
@@ -18,12 +18,14 @@ def get_wiki_cards():
 
 
 def write_wiki_cards(cards):
-    with open(PKG_ROOT / "card-list.json", "w") as fp:
+    with open(PKG_DATA / "card-list.json", "w") as fp:
         json.dump(cards, fp, indent=4)
 
 
 def get_wiki_page():
-    return requests.get("https://digimon.fandom.com/wiki/Digimon_Digital_Card_Battle/Cards")
+    return requests.get(
+        "https://digimon.fandom.com/wiki/Digimon_Digital_Card_Battle/Cards"
+    )
 
 
 def get_soup(doc: str):
@@ -32,16 +34,12 @@ def get_soup(doc: str):
 
 def get_info_boxes(soup):
     return (
-        soup
-        .html
-        .body
-        .find('div', attrs={'class': 'main-container'})
-        .find('div', attrs={'class': 'resizable-container'})
-        .find('div', attrs={'class': 'page has-right-rail'})
-        .main
-        .find('div', attrs={'class': "page-content"})
-        .find('div', attrs={'class': 'mw-content-ltr'})
-        .find('div', attrs={'class': 'mw-parser-output'})
+        soup.html.body.find("div", attrs={"class": "main-container"})
+        .find("div", attrs={"class": "resizable-container"})
+        .find("div", attrs={"class": "page has-right-rail"})
+        .main.find("div", attrs={"class": "page-content"})
+        .find("div", attrs={"class": "mw-content-ltr"})
+        .find("div", attrs={"class": "mw-parser-output"})
         .find_all(class_="portable-infobox")
     )
 
@@ -112,18 +110,24 @@ class WikiCardFactory:
     def _card_from_info_tags(tags):
         _id, name = tags[0].rsplit("</b>")[0].rsplit("<b>")[-1].split(": ")
         support = tags[1].rsplit('"effect">')[-1]
-        return Card(
-            id=int(_id),
-            name=name,
-            support=support
-        )
+        return Card(id=int(_id), name=name, support=support)
 
     @classmethod
     def _unitcard_from_info_tags(cls, tags):
         _id = tags[0].rsplit("<b>")[-1].split(":")[0]
 
-        level, specialty, _, name, c_attack, t_attack, x_attack, hp, dp, pp = \
-            cls._parse_basic_unitcard_tags(tags[1:-3])
+        (
+            level,
+            specialty,
+            _,
+            name,
+            c_attack,
+            t_attack,
+            x_attack,
+            hp,
+            dp,
+            pp,
+        ) = cls._parse_basic_unitcard_tags(tags[1:-3])
 
         support = tags[3].rsplit('"support">')[-1]
         c_damage, t_damage, x_damage, x_effect = cls._parse_attack_tags(tags[-3:])
@@ -132,17 +136,14 @@ class WikiCardFactory:
             id=int(_id),
             name=name,
             support=support,
-
             level=level,
             specialty=specialty,
-
             hp=int(hp),
             dp=int(dp),
             pp=int(pp),
-
             c_attack=Attack(name=c_attack, damage=c_damage),
             t_attack=Attack(name=t_attack, damage=t_damage),
-            x_attack=EffectAttack(name=x_attack, damage=x_damage, effect=x_effect)
+            x_attack=EffectAttack(name=x_attack, damage=x_damage, effect=x_effect),
         )
 
     @staticmethod
@@ -154,7 +155,9 @@ class WikiCardFactory:
         c_damage, t_damage, x_info = [tag.rsplit("<br/>")[-1] for tag in tags[:3]]
         x_damage, x_effect = x_info.split(", ", maxsplit=1)
 
-        c_damage, t_damage, x_damage = [int(damage[1:-1]) for damage in (c_damage, t_damage, x_damage)]
+        c_damage, t_damage, x_damage = [
+            int(damage[1:-1]) for damage in (c_damage, t_damage, x_damage)
+        ]
         return c_damage, t_damage, x_damage, x_effect
 
 
@@ -180,5 +183,5 @@ def clean_str(text: str):
     return " ".join(str(text).split())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

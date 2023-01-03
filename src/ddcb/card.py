@@ -20,9 +20,7 @@ class CardList:
 
     @classmethod
     def load(cls, cards: t.Iterable["Card"]):
-        cls.cards = {
-            card.name.lower(): card for card in cards
-        }
+        cls.cards = {card.name.lower(): card for card in cards}
 
     @classmethod
     def get(cls, name: str):
@@ -33,6 +31,7 @@ class CardFactory:
     @classmethod
     def from_json(cls, path):
         import json
+
         with open(path, "r") as fp:
             cards = json.load(fp)
         yield from cls.from_dicts(cards)
@@ -65,7 +64,7 @@ class Card:
         return Card(**d)
 
     @staticmethod
-    def find_index_by_name(cards: t.Iterable['Card'], name):
+    def find_index_by_name(cards: t.Iterable["Card"], name):
         for i, card in enumerate(cards):
             if card.name == name:
                 return i
@@ -89,7 +88,7 @@ class UnitCard(Card):
     @staticmethod
     def from_dict(d: dict):
         d = d.copy()
-        for attack in ('c_attack', 't_attack', 'x_attack'):
+        for attack in ("c_attack", "t_attack", "x_attack"):
             d[attack] = AttackFactory.from_dict(d[attack])
 
         return UnitCard(**d)
@@ -105,7 +104,7 @@ class AttackFactory:
 
     @staticmethod
     def is_effect_attack(d: dict):
-        return 'effect' in d
+        return "effect" in d
 
 
 @dc
@@ -119,5 +118,5 @@ class EffectAttack(Attack):
     effect: str = None
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

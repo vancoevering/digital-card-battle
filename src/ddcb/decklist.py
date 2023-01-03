@@ -20,7 +20,7 @@ def load_text_decklist(path):
         for line in fp.readlines():
             line = clean_str(line)
             count, name = parse_decklist_line(line)
-            decklist.extend([name]*count)
+            decklist.extend([name] * count)
     return decklist
 
 
@@ -50,9 +50,9 @@ def replace_icons(s: str):
     new_str = s.lower()
     for icon in ("o", "triangle", "x"):
         if new_str.endswith(icon):
-            new_str = new_str[:-len(icon)] + f"[{icon}]"
+            new_str = new_str[: -len(icon)] + f"[{icon}]"
     return new_str
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
