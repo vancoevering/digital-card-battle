@@ -1,11 +1,11 @@
 import typing as t
 from dataclasses import dataclass as dc
 
-from . import PKG_ROOT
+from . import PKG_DATA
 
 
 def main():
-    CardList.load_from_json(PKG_ROOT / "card-list.json")
+    CardList.load_from_json(PKG_DATA / "card-list.json")
     for c in CardList.cards:
         print(c)
     print(CardList.get("gabumon"))
