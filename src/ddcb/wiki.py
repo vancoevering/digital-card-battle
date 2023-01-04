@@ -50,8 +50,10 @@ def get_info_boxes(soup):
 
 class WikiCardFactory:
     ATTACK_BUTTONS = {"c": UnitCard.C_STR, "t": UnitCard.T_STR, "x": UnitCard.X_STR}
-    RE_IMG_LINKS: t.Dict[str, re.Pattern] = \
-        {text: re.compile(f'<img alt="B {button}.gif".*?>') for button, text in ATTACK_BUTTONS.items()}
+    RE_IMG_LINKS: t.Dict[str, re.Pattern] = {
+        text: re.compile(f'<img alt="B {button}.gif".*?>')
+        for button, text in ATTACK_BUTTONS.items()
+    }
 
     @classmethod
     def from_info_boxes(cls, boxes):
