@@ -1,4 +1,6 @@
+import re
 import requests
+import typing as t
 from bs4 import BeautifulSoup
 
 from . import PKG_DATA, dc_json as json
@@ -18,7 +20,9 @@ def get_wiki_cards():
 
 
 def write_wiki_cards(cards):
-    with open(PKG_DATA / "card-list.json", "w") as fp:
+    card_list = PKG_DATA / "card-list.json"
+    card_list.parent.mkdir(parents=True, exist_ok=True)
+    with card_list.open("w") as fp:
         json.dump(cards, fp, indent=4)
 
 
@@ -45,30 +49,9 @@ def get_info_boxes(soup):
 
 
 class WikiCardFactory:
-    C_IMG_LINK: str = (
-        '<img alt="B c.gif" class="lazyload" data-image-key="B_c.gif" data-image-name="B c.gif" '
-        'data-src="https://static.wikia.nocookie.net/digimon/images/c/c1/B_c.gif/revision/latest'
-        '/scale-to-width-down/14?cb=20090620223718" decoding="async" height="14" src="data:image'
-        '/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" width="14"/>'
-    )
-    T_IMG_LINK: str = (
-        '<img alt="B t.gif" class="lazyload" data-image-key="B_t.gif" data-image-name="B t.gif" '
-        'data-src="https://static.wikia.nocookie.net/digimon/images/1/1b/B_t.gif/revision/latest'
-        '/scale-to-width-down/14?cb=20100601190332" decoding="async" height="14" src="data:image'
-        '/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" width="14"/>'
-    )
-    X_IMG_LINK: str = (
-        '<img alt="B x.gif" class="lazyload" data-image-key="B_x.gif" data-image-name="B x.gif" '
-        'data-src="https://static.wikia.nocookie.net/digimon/images/6/6d/B_x.gif/revision/latest'
-        '/scale-to-width-down/14?cb=20090701010625" decoding="async" height="14" src="data:image'
-        '/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" width="14"/>'
-    )
-
-    _replace = {
-        C_IMG_LINK: UnitCard.C_STR,
-        T_IMG_LINK: UnitCard.T_STR,
-        X_IMG_LINK: UnitCard.X_STR,
-    }
+    ATTACK_BUTTONS = {"c": UnitCard.C_STR, "t": UnitCard.T_STR, "x": UnitCard.X_STR}
+    RE_IMG_LINKS: t.Dict[str, re.Pattern] = \
+        {text: re.compile(f'<img alt="B {button}.gif".*?>') for button, text in ATTACK_BUTTONS.items()}
 
     @classmethod
     def from_info_boxes(cls, boxes):
@@ -87,8 +70,8 @@ class WikiCardFactory:
 
     @classmethod
     def _replace_image_links(cls, text: str):
-        for img, value in cls._replace.items():
-            text = text.replace(img, value)
+        for attack_string, pattern in cls.RE_IMG_LINKS.items():
+            text = pattern.sub(attack_string, text)
         return text
 
     @classmethod
