@@ -1,15 +1,15 @@
 import random
 import typing as t
 
-from . import PKG_ROOT
+from . import PKG_DATA
 from .card import Card, UnitCard, CardList, CardFactory
 
 
 def main():
-    cards = CardFactory.from_json(PKG_ROOT / "card-list.json")
+    cards = CardFactory.from_json(PKG_DATA / "card-list.json")
     CardList.load(cards)
 
-    deck = Deck.from_json(PKG_ROOT / "tutorial-deck.json")
+    deck = Deck.from_json(PKG_DATA / "tutorial-deck.json")
     for c in deck.cards:
         print(c)
     field = Field(deck)
