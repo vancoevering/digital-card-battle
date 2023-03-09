@@ -1,19 +1,37 @@
 import typing as t
 from dataclasses import dataclass as dc
 
-from . import PKG_ROOT
+from . import PKG_DATA
 
 
 def main():
-    cards = CardFactory.from_json(PKG_ROOT / 'card-list.json')
-    for c in cards:
+    CardList.load_from_json(PKG_DATA / "card-list.json")
+    for c in CardList.cards:
         print(c)
+    print(CardList.get("gabumon"))
+
+
+class CardList:
+    cards: t.Dict[str, "Card"] = {}
+
+    @classmethod
+    def load_from_json(cls, path):
+        cls.load(CardFactory.from_json(path))
+
+    @classmethod
+    def load(cls, cards: t.Iterable["Card"]):
+        cls.cards = {card.name.lower(): card for card in cards}
+
+    @classmethod
+    def get(cls, name: str):
+        return cls.cards[name.lower()]
 
 
 class CardFactory:
     @classmethod
     def from_json(cls, path):
         import json
+
         with open(path, "r") as fp:
             cards = json.load(fp)
         yield from cls.from_dicts(cards)
@@ -25,13 +43,13 @@ class CardFactory:
 
     @classmethod
     def from_dict(cls, d):
-        if cls.is_unitcard(d):
+        if cls._is_unitcard(d):
             return UnitCard.from_dict(d)
         else:
             return Card.from_dict(d)
 
     @staticmethod
-    def is_unitcard(d):
+    def _is_unitcard(d):
         return "level" in d
 
 
@@ -44,6 +62,12 @@ class Card:
     @staticmethod
     def from_dict(d: dict):
         return Card(**d)
+
+    @staticmethod
+    def find_index_by_name(cards: t.Iterable["Card"], name):
+        for i, card in enumerate(cards):
+            if card.name == name:
+                return i
 
 
 @dc
@@ -64,7 +88,7 @@ class UnitCard(Card):
     @staticmethod
     def from_dict(d: dict):
         d = d.copy()
-        for attack in ('c_attack', 't_attack', 'x_attack'):
+        for attack in ("c_attack", "t_attack", "x_attack"):
             d[attack] = AttackFactory.from_dict(d[attack])
 
         return UnitCard(**d)
@@ -80,7 +104,7 @@ class AttackFactory:
 
     @staticmethod
     def is_effect_attack(d: dict):
-        return 'effect' in d
+        return "effect" in d
 
 
 @dc
@@ -94,5 +118,5 @@ class EffectAttack(Attack):
     effect: str = None
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
