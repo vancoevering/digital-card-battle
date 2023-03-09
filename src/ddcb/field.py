@@ -2,16 +2,14 @@ import random
 import typing as t
 
 from . import PKG_DATA
-from .card import Card, UnitCard, CardList, CardFactory
+from .card import Card, UnitCard, CardList
 
 
 def main():
-    cards = CardFactory.from_json(PKG_DATA / "card-list.json")
-    CardList.load(cards)
-
-    deck = Deck.from_json(PKG_DATA / "tutorial-deck.json")
+    CardList.load_from_json(PKG_DATA / "card-list.json")
+    deck = Deck.from_random()
     for c in deck.cards:
-        print(c)
+        print(c.name)
     field = Field(deck)
     print(field)
 
@@ -24,6 +22,14 @@ class Field:
 
         self.unit: t.Optional[UnitCard] = None
         self.dp: "DPStack" = DPStack()
+
+    def reset(self):
+        self.deck.reset()
+        self.hand = []
+        self.discard_pile = []
+
+        self.unit = None
+        self.dp = DPStack()
 
     def draw(self, count=1):
         for i in range(count):
@@ -86,8 +92,14 @@ class DPStack:
 
 
 class Deck:
+    SIZE = 30
+
     def __init__(self, cards: t.List[Card]):
         self.cards = cards.copy()
+        self.decklist = [c.name for c in cards]
+
+    def reset(self):
+        self.__init__(CardList.get_cards(self.decklist))
 
     def shuffle(self):
         random.shuffle(self.cards)
@@ -95,17 +107,22 @@ class Deck:
     def draw(self):
         return self.cards.pop()
 
-    @classmethod
-    def from_json(cls, path):
+    @staticmethod
+    def from_random():
+        cards = random.sample(list(CardList.cards.keys()), Deck.SIZE)
+        return Deck.from_names(cards)
+
+    @staticmethod
+    def from_json(path):
         import json
 
         with open(path, "r") as fp:
             names = json.load(fp)
-        return cls.from_names(names)
+        return Deck.from_names(names)
 
     @staticmethod
     def from_names(names: t.List[str]):
-        cards = [CardList.get(name) for name in names]
+        cards = CardList.get_cards(names)
         return Deck(cards)
 
 

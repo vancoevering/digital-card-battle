@@ -8,7 +8,7 @@ def main():
     CardList.load_from_json(PKG_DATA / "card-list.json")
     for c in CardList.cards:
         print(c)
-    print(CardList.get("gabumon"))
+    print(CardList.get_card("gabumon"))
 
 
 class CardList:
@@ -23,8 +23,12 @@ class CardList:
         cls.cards = {card.name.lower(): card for card in cards}
 
     @classmethod
-    def get(cls, name: str):
+    def get_card(cls, name: str):
         return cls.cards[name.lower()]
+
+    @classmethod
+    def get_cards(cls, names: t.Iterable[str]):
+        return [cls.get_card(c) for c in names]
 
 
 class CardFactory:

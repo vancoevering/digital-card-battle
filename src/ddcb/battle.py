@@ -1,59 +1,65 @@
 import random
+from enum import Enum
 import typing as t
-from dataclasses import dataclass as dc
 
 from ddcb import PKG_DATA
-from ddcb.card import CardList
+from ddcb.card import CardList, Attack
 from ddcb.field import Field, Deck
+
+T = t.TypeVar("T")
 
 
 def main():
     CardList.load_from_json(PKG_DATA / "card-list.json")
 
     player_one = Battler(
-        field=Field(Deck.from_json(PKG_DATA / "tutorial-deck.json")),
-        controller=RandomController(),
+        field=Field(Deck.from_random()),
+        controller=BaseController(),
     )
     player_two = Battler(
-        field=Field(Deck.from_json(PKG_DATA / "go-go-dinosaur-deck.json")),
-        controller=RandomController(),
+        field=Field(deck=Deck.from_random()),
+        controller=BaseController(),
     )
-    player_one.battle(player_two)
-    pass
+    result = player_one.battle(player_two)
+    print(f"Result: player one {result.name}")
 
 
-@dc
 class Battler:
-    field: Field
-    controller: "BaseController"
+    def __init__(self, field: Field, controller: "BaseController"):
+        self.field = field
+        self.controller = controller
 
-    def battle(self, opponent: "Battler", has_first_turn=True):
-        is_battler_turn = has_first_turn
-        winner = None
+    def battle(self, opponent: "Battler", has_first_turn=True) -> "BattleResult":
+        self._setup_field()
+        opponent._setup_field()
 
-        self.shuffle()
-        opponent.shuffle()
-        while winner is None:
-            if is_battler_turn:
-                winner = self.do_turn(opponent)
-                is_battler_turn = False
+        return self._battle_loop(opponent, has_first_turn)
+
+    def _setup_field(self):
+        self.field.reset()
+        self.field.deck.shuffle()
+
+    def _battle_loop(self, opponent: "Battler", is_own_turn: bool) -> "BattleResult":
+        while True:
+            if is_own_turn:
+                result = self.do_turn(opponent)
+                if result is not None:
+                    return result
             else:
-                winner = opponent.do_turn(self)
-                is_battler_turn = True
+                result = opponent.do_turn(self)
+                if result is not None:
+                    return result.flip()
 
-    def do_turn(self, opponent: "Battler"):
-        winner = None
+            is_own_turn = not is_own_turn
+
+    def do_turn(self, opponent: "Battler") -> t.Optional["BattleResult"]:
         for phase in (self.do_prep_phase, self.do_upgrade_phase):
-            winner = phase() or None
-            if winner is not None:
-                return winner
+            result = phase() or None
+            if result is not None:
+                return result
 
-        winner = self.do_battle_phase(opponent)
-        return winner
-
-    @staticmethod
-    def _not(bool_or_none):
-        return (not bool_or_none) if (bool_or_none is not None) else None
+        result = self.do_battle_phase(opponent)
+        return result
 
     def do_prep_phase(self):
         # Prep Phase
@@ -63,7 +69,8 @@ class Battler:
             self._draw_til_full()
 
             #   > (Confirm: next / Mulligan:new cards)
-            if self._confirm_draw():
+            # if self._confirm_draw():
+            if self.controller.prep_confirm_draw():
                 break
             else:
                 self._discard_hand()
@@ -81,7 +88,8 @@ class Battler:
         #   > (choose upgrade card from hand to play)
         pass
 
-    def do_battle_phase(self, opponent: "Battler"):
+    def do_battle_phase(self, opponent: "Battler") -> t.Optional["BattleResult"]:
+        print("---")
         if not opponent._has_unit():
             return None
 
@@ -92,22 +100,46 @@ class Battler:
 
         # - Opponent choose support (card from hand OR top deck) [opt]
         # - Player choose support (card from hand OR top deck) [opt]
-        opponent_support = opponent._choose_card_or_gamble_opt()
-        battler_support = self._choose_card_or_gamble_opt()
+        # opponent_support = opponent._choose_card_or_gamble_opt()
+        # battler_support = self._choose_card_or_gamble_opt()
+        opponent_support = opponent.controller.battle_choose_support_or_gamble()
+        battler_support = self.controller.battle_choose_support_or_gamble()
 
         # - Apply player support
         # - Apply opponent support
         pass
 
+        print(f"own hp: {self.get_hp()}")
+        print(f"opp hp: {opponent.get_hp()}")
         # - Apply player damage
-        # - Apply opponent damage
-        print(battler_attack)
-        print(opponent_attack)
-        return None
-        pass
+        print(f"own attack: {battler_attack}")
+        self._do_attack(battler_attack, opponent)
+        print(f"opp hp: {opponent.get_hp()}")
 
-    def shuffle(self):
-        self.field.deck.shuffle()
+        # - Apply opp damage
+        if not opponent.unit_is_defeated():
+            print(f"opponent attack: {opponent_attack}")
+            opponent._do_attack(opponent_attack, self)
+            print(f"own hp: {self.get_hp()}")
+
+        if self.unit_is_defeated() and opponent.unit_is_defeated():
+            print(
+                f"Tie - own hp: {self.get_hp()} - is defeated: {self.unit_is_defeated()}"
+            )
+            print(
+                f"Tie - opp hp: {opponent.get_hp()} - is defeated: {opponent.unit_is_defeated()}"
+            )
+            return BattleResult.Tie
+        elif self.unit_is_defeated():
+            return BattleResult.Loss
+        elif opponent.unit_is_defeated():
+            return BattleResult.Win
+        else:
+            return None
+
+    @staticmethod
+    def _do_attack(attack: Attack, opponent: "Battler"):
+        opponent.set_hp(opponent.get_hp() - attack.damage)
 
     def _draw_til_full(self):
         self.field.draw(4 - len(self.field.hand))
@@ -144,29 +176,58 @@ class Battler:
             if unit_name:
                 self.field.boost_dp(unit_name)
 
-    def _choose(self, options: t.Sequence[str]):
+    def _choose(self, options: t.Sequence[T]) -> T:
         return self.controller.choose(options)
 
-    def _choose_opt(self, options: t.Sequence[str]):
-        options = list(options) + ["No Selection"]
+    def _choose_opt(self, options: t.Sequence[T]) -> T:
+        options = list(options)
+        options.append(None)
         return self._choose(options)
 
     def _choose_attack(self):
-        options = [self.field.unit.C_STR, self.field.unit.T_STR, self.field.unit.X_STR]
+        options: t.List[Attack] = [
+            self.field.unit.c_attack,
+            self.field.unit.t_attack,
+            self.field.unit.x_attack,
+        ]
         return self._choose(options)
 
-    def _choose_card(self):
-        options = [card.name for card in self.field.hand]
-        return self._choose(options)
+    def get_hp(self):
+        return self.field.unit.hp
 
-    def _choose_card_or_gamble_opt(self):
-        options = [card.name for card in self.field.hand] + ["All or nothing!"]
-        return self._choose_opt(options)
+    def set_hp(self, value: int):
+        self.field.unit.hp = value
+
+    def unit_is_defeated(self):
+        return self.get_hp() <= 0
+
+
+class BattleResult(Enum):
+    Win = 1
+    Loss = 2
+    Tie = 3
+
+    def flip(self):
+        if self.value == BattleResult.Win:
+            return BattleResult.Loss
+        if self.value == BattleResult.Loss:
+            return BattleResult.Win
+        if self.value == BattleResult.Tie:
+            return BattleResult.Tie
+        return self
 
 
 class BaseController:
     @staticmethod
-    def choose(options: t.Sequence[str]):
+    def prep_confirm_draw() -> bool:
+        return True
+
+    @staticmethod
+    def battle_choose_support_or_gamble() -> dict:
+        return {"gamble": True}
+
+    @staticmethod
+    def choose(options: t.Sequence[T]) -> T:
         return options[0]
 
 
