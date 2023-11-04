@@ -3,29 +3,30 @@ from enum import Enum
 import typing as t
 
 from ddcb import PKG_DATA
-from ddcb.card import CardList, Attack
+from ddcb.card import Attack
 from ddcb.field import Field, Deck
 
 T = t.TypeVar("T")
 
 
 def main():
-    CardList.load_from_json(PKG_DATA / "card-list.json")
-
     player_one = Battler(
+        name="Yugi",
         field=Field(Deck.from_random()),
         controller=BaseController(),
     )
     player_two = Battler(
+        name="Kaiba",
         field=Field(deck=Deck.from_random()),
         controller=BaseController(),
     )
     result = player_one.battle(player_two)
-    print(f"Result: player one {result.name}")
+    print(f"Result: {player_one.name} {result.name}")
 
 
 class Battler:
-    def __init__(self, field: Field, controller: "BaseController"):
+    def __init__(self, name: str, field: Field, controller: "BaseController"):
+        self.name = name
         self.field = field
         self.controller = controller
 
@@ -109,12 +110,12 @@ class Battler:
         # - Apply opponent support
         pass
 
-        print(f"own hp: {self.get_hp()}")
-        print(f"opp hp: {opponent.get_hp()}")
+        print(f"own {self.field.unit.name} hp: {self.get_hp()}")
+        print(f"opp {opponent.field.unit.name} hp: {opponent.get_hp()}")
         # - Apply player damage
-        print(f"own attack: {battler_attack}")
+        print(f"own {self.field.unit.name} attack: {battler_attack}")
         self._do_attack(battler_attack, opponent)
-        print(f"opp hp: {opponent.get_hp()}")
+        print(f"opp {opponent.field.unit.name} hp: {opponent.get_hp()}")
 
         # - Apply opp damage
         if not opponent.unit_is_defeated():
@@ -185,10 +186,13 @@ class Battler:
         return self._choose(options)
 
     def _choose_attack(self):
+        unit = self.field.unit
+        if not unit:
+            raise Exception()
         options: t.List[Attack] = [
-            self.field.unit.c_attack,
-            self.field.unit.t_attack,
-            self.field.unit.x_attack,
+            unit.c_attack,
+            unit.t_attack,
+            unit.x_attack,
         ]
         return self._choose(options)
 

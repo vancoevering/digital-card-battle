@@ -1,12 +1,11 @@
 import random
 import typing as t
 
-from . import PKG_DATA
-from .card import Card, UnitCard, CardList
+from ddcb import PKG_DATA
+from ddcb.card import Card, CardList, UnitCard
 
 
 def main():
-    CardList.load_from_json(PKG_DATA / "card-list.json")
     deck = Deck.from_random()
     for c in deck.cards:
         print(c.name)
@@ -68,6 +67,8 @@ class Field:
 
     def pop_card_from_hand(self, name):
         i = Card.find_index_by_name(self.hand, name)
+        if i is None:
+            raise Exception(f"Card named {name} not found!")
         return self.hand.pop(i)
 
 
@@ -99,7 +100,7 @@ class Deck:
         self.decklist = [c.name for c in cards]
 
     def reset(self):
-        self.__init__(CardList.get_cards(self.decklist))
+        self.__init__(CardList().get_cards(self.decklist))
 
     def shuffle(self):
         random.shuffle(self.cards)
@@ -109,7 +110,7 @@ class Deck:
 
     @staticmethod
     def from_random():
-        cards = random.sample(list(CardList.cards.keys()), Deck.SIZE)
+        cards = random.sample(list(CardList().cards.keys()), Deck.SIZE)
         return Deck.from_names(cards)
 
     @staticmethod
@@ -122,7 +123,7 @@ class Deck:
 
     @staticmethod
     def from_names(names: t.List[str]):
-        cards = CardList.get_cards(names)
+        cards = CardList().get_cards(names)
         return Deck(cards)
 
 
