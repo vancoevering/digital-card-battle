@@ -4,6 +4,8 @@ import typing as t
 from ddcb import PKG_DATA
 from ddcb.card import Card, CardList, UnitCard
 
+MAX_HAND_SIZE = 4
+
 
 def main():
     deck = Deck.from_random()
@@ -31,9 +33,19 @@ class Field:
         self.dp = DPStack()
 
     def draw(self, count=1):
-        for i in range(count):
+        deck_count = len(self.deck)
+        draw_count = min(count, deck_count)
+
+        if draw_count < count:
+            print(f"Unable to draw {count} cards, since deck has {deck_count} cards.")
+            print(f"Drawing {draw_count} cards instead.")
+
+        for _ in range(draw_count):
             card = self.deck.draw()
             self.hand.append(card)
+
+    def draw_til_full(self):
+        self.draw(MAX_HAND_SIZE - len(self.hand))
 
     def discard(self, index=0):
         card = self.hand.pop(index)
@@ -60,15 +72,16 @@ class Field:
     def pop_unit_from_hand(self, name) -> UnitCard:
         card = self.pop_card_from_hand(name)
         if isinstance(card, UnitCard):
-            # noinspection PyTypeChecker
             return card
         else:
             raise Exception(f"f{card.name} is not a Unit!")
 
-    def pop_card_from_hand(self, name):
-        i = Card.find_index_by_name(self.hand, name)
+    def pop_card_from_hand(self, card):
+        i = Card.find_index(self.hand, card)
         if i is None:
-            raise Exception(f"Card named {name} not found!")
+            raise Exception(
+                f"Card named {card if isinstance(card, str) else card.name} not found!"
+            )
         return self.hand.pop(i)
 
 
@@ -108,6 +121,9 @@ class Deck:
     def draw(self):
         return self.cards.pop()
 
+    def is_empty(self):
+        return len(self.cards) < 1
+
     @staticmethod
     def from_random():
         cards = random.sample(list(CardList().cards.keys()), Deck.SIZE)
@@ -125,6 +141,9 @@ class Deck:
     def from_names(names: t.List[str]):
         cards = CardList().get_cards(names)
         return Deck(cards)
+
+    def __len__(self):
+        return len(self.cards)
 
 
 if __name__ == "__main__":

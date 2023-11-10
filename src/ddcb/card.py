@@ -103,7 +103,15 @@ class Card:
         return Card(**d)
 
     @staticmethod
-    def find_index_by_name(cards: t.Iterable["Card"], name):
+    def find_index(cards: t.Iterable["Card"], card: t.Union["Card", str]):
+        if isinstance(card, str):
+            return Card.find_index_by_name(cards, card)
+        for i, _card in enumerate(cards):
+            if _card is card:
+                return i
+
+    @staticmethod
+    def find_index_by_name(cards: t.Iterable["Card"], name: str):
         for i, card in enumerate(cards):
             if card.name == name:
                 return i
