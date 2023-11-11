@@ -1,7 +1,6 @@
 import random
 import typing as t
 
-from ddcb import PKG_DATA
 from ddcb.card import Card, CardList, UnitCard
 
 MAX_HAND_SIZE = 4
