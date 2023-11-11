@@ -1,13 +1,14 @@
 import random
 from abc import ABC, abstractmethod
-from itertools import cycle
-from enum import Enum
 from collections.abc import Callable
+from dataclasses import dataclass
+from dataclasses import field as dc_field
+from enum import Enum
+from itertools import cycle
 from typing import Type
 
-from dataclasses import dataclass, field as dc_field
-from ddcb.field import Field, Deck
 from ddcb.base_controller import BaseController, ConfirmHandResponse
+from ddcb.field import Deck, Field
 
 
 def main():

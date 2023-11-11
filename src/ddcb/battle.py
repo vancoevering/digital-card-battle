@@ -1,10 +1,10 @@
 import random
-from enum import Enum
 import typing as t
+from enum import Enum
 
 from ddcb import PKG_DATA
 from ddcb.card import Attack
-from ddcb.field import Field, Deck
+from ddcb.field import Deck, Field
 
 T = t.TypeVar("T")
 
