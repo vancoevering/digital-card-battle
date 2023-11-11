@@ -1,5 +1,6 @@
 import typing as t
 from dataclasses import dataclass as dc
+from enum import Enum
 
 from ddcb import PKG_DATA
 
@@ -7,40 +8,11 @@ DEF_CARD_LIST_FILE = PKG_DATA / "card-list.json"
 
 
 def main():
-    # CardList.load_from_json(PKG_DATA / "card-list.json")
-    # for c in CardList.cards:
-    #     print(c)
-    # print(CardList.get_card("gabumon"))
-
     singleton = CardList()
-    # for c in singleton.cards:
-    #     print(c)
     print(singleton.get_card("gabumon"))
 
     singleton2 = CardList()
-    # for c in singleton2.cards:
-    #     print(c)
     print(singleton2.get_card("agumon"))
-
-
-# class CardList:
-#     cards: t.Dict[str, "Card"] = {}
-
-#     @classmethod
-#     def load_from_json(cls, path):
-#         cls.load(CardFactory.from_json(path))
-
-#     @classmethod
-#     def load(cls, cards: t.Iterable["Card"]):
-#         cls.cards = {card.name.lower(): card for card in cards}
-
-#     @classmethod
-#     def get_card(cls, name: str):
-#         return cls.cards[name.lower()]
-
-#     @classmethod
-#     def get_cards(cls, names: t.Iterable[str]):
-#         return [cls.get_card(c) for c in names]
 
 
 class CardList:
@@ -117,9 +89,25 @@ class Card:
                 return i
 
 
+class Level(Enum):
+    ROOKIE = "R"
+    CHAMPION = "C"
+    ULTIMATE = "U"
+    PARTNER = ""
+    ARMOR = "A"
+
+    def evolution_targets(self):
+        targets = {
+            Level.ROOKIE: [Level.CHAMPION],
+            Level.CHAMPION: [Level.ULTIMATE],
+            Level.PARTNER: [Level.CHAMPION, Level.ARMOR],
+        }
+        return targets.get(self, [])
+
+
 @dc
 class UnitCard(Card):
-    level: str
+    level: Level
     specialty: str
     hp: int
     dp: int
@@ -135,6 +123,7 @@ class UnitCard(Card):
     @staticmethod
     def from_dict(d: dict):
         d = d.copy()
+        d["level"] = Level(d["level"])
         for attack in ("c_attack", "t_attack", "x_attack"):
             d[attack] = AttackFactory.from_dict(d[attack])
 

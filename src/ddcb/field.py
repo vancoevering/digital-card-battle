@@ -6,6 +6,9 @@ from ddcb.card import Card, CardList, UnitCard
 
 MAX_HAND_SIZE = 4
 
+type CardOrName = Card | str
+type UnitOrName = UnitCard | str
+
 
 def main():
     deck = Deck.from_random()
@@ -55,9 +58,18 @@ class Field:
         for _ in range(len(self.hand)):
             self.discard()
 
-    def play_unit(self, unit_name):
-        unit_card = self.pop_unit_from_hand(unit_name)
+    def play_unit(self, unit: UnitOrName):
+        unit_card = self.pop_unit_from_hand(unit)
         self.unit = unit_card
+
+    def discard_unit(self):
+        if self.unit is None:
+            raise Exception("Tried to discard unit, but there isn't one.")
+        self.discard_pile.append(self.unit)
+        self.unit = None
+
+    def has_unit_in_hand(self):
+        return any((isinstance(card, UnitCard) for card in self.hand))
 
     def get_units_in_hand(self):
         return [card for card in self.hand if isinstance(card, UnitCard)]
@@ -65,18 +77,37 @@ class Field:
     def has_unit(self):
         return bool(self.unit)
 
-    def boost_dp(self, unit_name):
-        unit_card = self.pop_unit_from_hand(unit_name)
+    def boost_dp(self, unit: UnitOrName):
+        unit_card = self.pop_unit_from_hand(unit)
         self.dp.push(unit_card)
 
-    def pop_unit_from_hand(self, name) -> UnitCard:
-        card = self.pop_card_from_hand(name)
+    def get_evolution_targets(self):
+        if not self.unit:
+            raise Exception("No unit active when checking evolution targets.")
+
+        units_in_hand = self.get_units_in_hand()
+        target_levels = self.unit.level.evolution_targets()
+        return [unit for unit in units_in_hand if unit.level in target_levels]
+
+    def evolve_unit(self, unit: UnitOrName):
+        unit_card = self.pop_unit_from_hand(unit)
+
+        if self.unit is None:
+            raise Exception("Can't evolve without a unit!")
+
+        prev_unit_health = self.unit.hp
+        self.discard_unit()
+        self.unit = unit_card
+        self.unit.hp = max(self.unit.hp, prev_unit_health)
+
+    def pop_unit_from_hand(self, unit: UnitOrName) -> UnitCard:
+        card = self.pop_card_from_hand(unit)
         if isinstance(card, UnitCard):
             return card
         else:
             raise Exception(f"f{card.name} is not a Unit!")
 
-    def pop_card_from_hand(self, card):
+    def pop_card_from_hand(self, card: CardOrName):
         i = Card.find_index(self.hand, card)
         if i is None:
             raise Exception(

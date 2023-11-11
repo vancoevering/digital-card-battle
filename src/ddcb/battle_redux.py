@@ -1,7 +1,9 @@
 import random
+from abc import ABC, abstractmethod
 from itertools import cycle
 from enum import Enum
 from collections.abc import Callable
+from typing import Type
 
 from dataclasses import dataclass, field as dc_field
 from ddcb.field import Field, Deck
@@ -19,7 +21,7 @@ def main():
         deck=Deck.from_random(),
         controller=BaseController(),
     )
-    Battle(player_one, player_two).battle()
+    print("Battle: ", Battle(player_one, player_two).battle())
 
 
 @dataclass
@@ -38,103 +40,114 @@ class TurnResult(Enum):
     CONTINUE = 0
     NO_UNIT = 1
 
-type Phases = list[Callable[[], TurnResult]]
+
+type PhaseFuncs = list[Callable[[], TurnResult]]
+
 
 @dataclass
-class Turn:
-    # TODO: Let's find a better name for this class
+class Phase(ABC):
     player: Player
     opponent: Player
 
-    def do_turn(self) -> TurnResult:
-        # TODO: add each of the turn phases
-        phases: Phases = [
-            self.do_prep_phase,
-        ]
-        return self.do_phases(phases)
-    
-    def do_phases(self, phases: Phases):
-        for phase in phases:
-            result = phase()
+    @classmethod
+    def from_phase(cls, phase: "Phase"):
+        return cls(phase.player, phase.opponent)
+
+    @abstractmethod
+    def do(self) -> TurnResult:
+        raise NotImplementedError
+
+    def do_phases(self, phases: list[Type["Phase"]]):
+        phase_funcs = [phase.from_phase(self).do for phase in phases]
+        return self.do_phase_funcs(phase_funcs)
+
+    def do_phase_funcs(self, phase_funcs: PhaseFuncs):
+        for phase_func in phase_funcs:
+            result = phase_func()
             if result != TurnResult.CONTINUE:
                 return result
         return TurnResult.CONTINUE
 
 
-    def do_prep_phase(self) -> TurnResult:
-        subphases: Phases = [self.do_prep_draw_cards, self.do_prep_play_unit]
-        return self.do_phases(subphases)
+class Turn(Phase):
+    def do(self):
+        phases: list[Type[Phase]] = [
+            PrepPhase,
+            UpgradePhase,
+        ]
+        return self.do_phases(phases)
 
-    def do_prep_draw_cards(self):
+
+class PrepPhase(Phase):
+    def do(self) -> TurnResult:
+        subphases: PhaseFuncs = [self.draw_cards, self.prep_play_unit]
+        return self.do_phase_funcs(subphases)
+
+    def draw_cards(self):
         self.player.field.draw_til_full()
-        return self.do_prep_confirm_hand()
-    
-    # def do_prep_confirm_hand_3(self) -> TurnResult:
-    #     if not self.player.field.has_unit():
-    #         if self.player.deck.is_empty():
-    #             return TurnResult.NO_UNIT
-    #         return self.do_prep_mulligan()
-        
-    #     if not self.player.deck.is_empty():
-    #         choice = self.player.controller.confirm_hand()
-    #         if choice == ConfirmHandResponse.MULLIGAN:
-    #             return self.do_prep_mulligan()
-        
-    #     return TurnResult.CONTINUE
-    
-    def do_prep_confirm_hand(self) -> TurnResult:
+        return self.confirm_hand()
+
+    def confirm_hand(self):
         if self.player.deck.is_empty():
             if not self.player.field.has_unit():
-                print("Deck empty and no unit!")
                 return TurnResult.NO_UNIT
-            print("Deck empty: Auto-confirm hand")
+            # Auto-confirm
             return TurnResult.CONTINUE
-        
-        if not self.player.field.has_unit():
+
+        if not self.player.field.has_unit_in_hand():
             # Auto-mulligan
-            return self.do_prep_mulligan()
-        
+            return self.mulligan()
+
         choice = self.player.controller.confirm_hand()
         if choice == ConfirmHandResponse.MULLIGAN:
-            return self.do_prep_mulligan()
-        
+            return self.mulligan()
+
         return TurnResult.CONTINUE
 
-
-    # def do_prep_confirm_hand(self):
-    #     if self.player.deck.is_empty():
-    #         print(f"{self.player.name}'s deck is empty. Hand kept by default.")
-    #         return
-
-    #     choice = self.player.controller.confirm_hand()
-    #     if choice == ConfirmHandResponse.MULLIGAN:
-    #         self.do_prep_mulligan()
-
-    def do_prep_mulligan(self):
+    def mulligan(self):
         self.player.field.discard_hand()
-        return self.do_prep_draw_cards()
+        return self.draw_cards()
 
-    def do_prep_play_unit(self):
+    def prep_play_unit(self):
         if self.player.field.has_unit():
             print(f"{self.player.name} already has a unit in play.")
-            return TurnResult.CONTINUE
+        else:
+            choice = self.player.controller.choose_unit(
+                self.player.field.get_units_in_hand()
+            )
+            self.player.field.play_unit(choice)
 
-        choice = self.player.controller.choose_unit()
-        # TODO: Would we EVER let a player choose NO?
-        # TODO: Should player always have at least one unit in hand at this step?
-        if choice is None:
-            return TurnResult.NO_UNIT
-        self.player.field.play_unit(choice)
         return TurnResult.CONTINUE
 
-    def do_prep_play_unit_2(self):
-        if not self.player.field.has_unit():
-            choice = self.player.controller.choose_unit()
-            if choice is None:
-                return TurnResult.NO_UNIT
-            self.player.field.play_unit(choice)
-        else:
-            print(f"{self.player.name} already has a unit in play.")
+
+class UpgradePhase(Phase):
+    def do(self):
+        subphases: PhaseFuncs = [
+            self.choose_dp_booster,
+            # self.play_dp_option,
+            self.choose_evolution,
+        ]
+        return self.do_phase_funcs(subphases)
+
+    def choose_dp_booster(self):
+        units_in_hand = self.player.field.get_units_in_hand()
+        if units_in_hand:
+            choice = self.player.controller.choose_dp_booster(units_in_hand)
+            if choice is not None:
+                self.player.field.boost_dp(choice)
+        return TurnResult.CONTINUE
+
+    def play_dp_option(self):
+        raise NotImplementedError
+
+    def choose_evolution(self):
+        evolution_targets = self.player.field.get_evolution_targets()
+        if len(evolution_targets) > 0:
+            # TODO: we should make current unit a stack
+            # so we can place the evo on top of the previous form
+            choice = self.player.controller.choose_evolution(evolution_targets)
+            if choice is not None:
+                self.player.field.evolve_unit(choice)
         return TurnResult.CONTINUE
 
 
@@ -168,8 +181,8 @@ class Battle:
             self.turn += 1
             turn: Turn = next(turn_order)
             print(turn.player.name, f"Turn {self.turn}")
-            result = turn.do_turn()
-            if result:
+            result = turn.do()
+            if result != TurnResult.CONTINUE:
                 return result
 
 
