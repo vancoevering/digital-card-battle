@@ -1,30 +1,41 @@
 import typing as t
 from dataclasses import dataclass as dc
+from enum import Enum
 
-from . import PKG_DATA
+from ddcb import PKG_DATA
+
+DEF_CARD_LIST_FILE = PKG_DATA / "card-list.json"
 
 
 def main():
-    CardList.load_from_json(PKG_DATA / "card-list.json")
-    for c in CardList.cards:
-        print(c)
-    print(CardList.get("gabumon"))
+    singleton = CardList()
+    print(singleton.get_card("gabumon"))
+
+    singleton2 = CardList()
+    print(singleton2.get_card("agumon"))
 
 
 class CardList:
-    cards: t.Dict[str, "Card"] = {}
+    _instance = None
 
-    @classmethod
-    def load_from_json(cls, path):
-        cls.load(CardFactory.from_json(path))
+    def __new__(cls, path=DEF_CARD_LIST_FILE):
+        if not cls._instance:
+            print("Creating new instance...")
+            cls._instance = super().__new__(cls)
+            cls._instance.load_from_json(path)
+        return cls._instance
 
-    @classmethod
-    def load(cls, cards: t.Iterable["Card"]):
-        cls.cards = {card.name.lower(): card for card in cards}
+    def load_from_json(self, path):
+        self.load(CardFactory.from_json(path))
 
-    @classmethod
-    def get(cls, name: str):
-        return cls.cards[name.lower()]
+    def load(self, cards: t.Iterable["Card"]):
+        self.cards = {card.name.lower(): card for card in cards}
+
+    def get_card(self, name: str):
+        return self.cards[name.lower()]
+
+    def get_cards(self, names: t.Iterable[str]):
+        return [self.get_card(c) for c in names]
 
 
 class CardFactory:
@@ -64,15 +75,39 @@ class Card:
         return Card(**d)
 
     @staticmethod
-    def find_index_by_name(cards: t.Iterable["Card"], name):
+    def find_index(cards: t.Iterable["Card"], card: t.Union["Card", str]):
+        if isinstance(card, str):
+            return Card.find_index_by_name(cards, card)
+        for i, _card in enumerate(cards):
+            if _card is card:
+                return i
+
+    @staticmethod
+    def find_index_by_name(cards: t.Iterable["Card"], name: str):
         for i, card in enumerate(cards):
             if card.name == name:
                 return i
 
 
+class Level(Enum):
+    ROOKIE = "R"
+    CHAMPION = "C"
+    ULTIMATE = "U"
+    PARTNER = ""
+    ARMOR = "A"
+
+    def evolution_targets(self):
+        targets = {
+            Level.ROOKIE: [Level.CHAMPION],
+            Level.CHAMPION: [Level.ULTIMATE],
+            Level.PARTNER: [Level.CHAMPION, Level.ARMOR],
+        }
+        return targets.get(self, [])
+
+
 @dc
 class UnitCard(Card):
-    level: str
+    level: Level
     specialty: str
     hp: int
     dp: int
@@ -88,6 +123,7 @@ class UnitCard(Card):
     @staticmethod
     def from_dict(d: dict):
         d = d.copy()
+        d["level"] = Level(d["level"])
         for attack in ("c_attack", "t_attack", "x_attack"):
             d[attack] = AttackFactory.from_dict(d[attack])
 
@@ -115,7 +151,7 @@ class Attack:
 
 @dc
 class EffectAttack(Attack):
-    effect: str = None
+    effect: t.Optional[str] = None
 
 
 if __name__ == "__main__":

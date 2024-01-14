@@ -1,9 +1,6 @@
-# Project data files
-*.json
-*-deck.txt
-
-# Pycharm
+# IDEs
 .idea
+.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

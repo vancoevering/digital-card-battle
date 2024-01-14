@@ -1,10 +1,12 @@
 import re
-import requests
 import typing as t
+
+import requests
 from bs4 import BeautifulSoup
 
-from . import PKG_DATA, dc_json as json
-from .card import Card, UnitCard, Attack, EffectAttack
+from . import PKG_DATA
+from . import dc_json as json
+from .card import Attack, Card, EffectAttack, UnitCard
 
 
 def main():

@@ -1,0 +1,4945 @@
+[
+    {
+        "id": 0,
+        "name": "Imperialdramon",
+        "support": "Add number of DP Cards in DP Slot x100 to own Attack Power.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1900,
+        "dp": 60,
+        "pp": 10,
+        "c_attack": {
+            "name": "Mega Fire",
+            "damage": 980
+        },
+        "t_attack": {
+            "name": "Eternal Zeal",
+            "damage": 670
+        },
+        "x_attack": {
+            "name": "Shining Blade",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 1,
+        "name": "Omnimon I",
+        "support": "Changes own Specialty to Fire. Boost own Attack Power +100.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1800,
+        "dp": 60,
+        "pp": 20,
+        "c_attack": {
+            "name": "Transcendent Sword",
+            "damage": 960
+        },
+        "t_attack": {
+            "name": "Garuru Cannon",
+            "damage": 560
+        },
+        "x_attack": {
+            "name": "Double Shot",
+            "damage": 0,
+            "effect": "[X] Counter"
+        }
+    },
+    {
+        "id": 2,
+        "name": "WarGreymon",
+        "support": "Add number of Cards in Hand x100 to own Attack Power.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1650,
+        "dp": 50,
+        "pp": 20,
+        "c_attack": {
+            "name": "Terra Force",
+            "damage": 900
+        },
+        "t_attack": {
+            "name": "Great Tornado",
+            "damage": 670
+        },
+        "x_attack": {
+            "name": "Dramon Cutter",
+            "damage": 380,
+            "effect": "Ice Foe x3"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Phoenixmon",
+        "support": "Digimon KO'd in battle revives with 500 HP. Battle is still lost.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1320,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Crimson Flame",
+            "damage": 750
+        },
+        "t_attack": {
+            "name": "Crimson Flare",
+            "damage": 560
+        },
+        "x_attack": {
+            "name": "Life Force",
+            "damage": 200,
+            "effect": "Eat-Up HP"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Paildramon",
+        "support": "If own Specialty is Fire, boost own Attack Power +300.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1230,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Desperado Blaster",
+            "damage": 800
+        },
+        "t_attack": {
+            "name": "Super Flash",
+            "damage": 620
+        },
+        "x_attack": {
+            "name": "Electric Bolt",
+            "damage": 450,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Gigadramon",
+        "support": "None",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1480,
+        "dp": 50,
+        "pp": 10,
+        "c_attack": {
+            "name": "Giga Byte Wing",
+            "damage": 900
+        },
+        "t_attack": {
+            "name": "Evil Claw",
+            "damage": 710
+        },
+        "x_attack": {
+            "name": "Giga Heat",
+            "damage": 550,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 6,
+        "name": "RealMetalGreymon",
+        "support": "Boost own Attack Power +300.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1540,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Terra Destroyer",
+            "damage": 850
+        },
+        "t_attack": {
+            "name": "Metal Slash II",
+            "damage": 600
+        },
+        "x_attack": {
+            "name": "Powerful Flame",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Garudamon",
+        "support": "If own Attack is [C], attack first.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1320,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Wing Blade",
+            "damage": 730
+        },
+        "t_attack": {
+            "name": "Crimson Claw",
+            "damage": 550
+        },
+        "x_attack": {
+            "name": "Eagle Claw",
+            "damage": 320,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 8,
+        "name": "MasterTyrannomon",
+        "support": "If own Specialty is Fire, own Attack Power is doubled.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1280,
+        "dp": 50,
+        "pp": 20,
+        "c_attack": {
+            "name": "Master Fire",
+            "damage": 850
+        },
+        "t_attack": {
+            "name": "Master Claw",
+            "damage": 520
+        },
+        "x_attack": {
+            "name": "Hyper Heat Blast",
+            "damage": 370,
+            "effect": "Ice Foe x3"
+        }
+    },
+    {
+        "id": 9,
+        "name": "MetalGreymon",
+        "support": "If own Level is U, boost own Attack Power +500.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1540,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Fire Blast",
+            "damage": 720
+        },
+        "t_attack": {
+            "name": "Metal Slash",
+            "damage": 540
+        },
+        "x_attack": {
+            "name": "Flame of Fury",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Vermilimon",
+        "support": "None",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1430,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Volcano Strike II",
+            "damage": 700
+        },
+        "t_attack": {
+            "name": "Vermin Blaze",
+            "damage": 510
+        },
+        "x_attack": {
+            "name": "Hard Tackle",
+            "damage": 0,
+            "effect": "[T] Counter"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Meteormon",
+        "support": "Lower opponent's [C] Attack Power to 0.",
+        "level": "U",
+        "specialty": "Fire",
+        "hp": 1150,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Big Bang Blow",
+            "damage": 750
+        },
+        "t_attack": {
+            "name": "Falling Star",
+            "damage": 400
+        },
+        "x_attack": {
+            "name": "Cosmic Flash",
+            "damage": 200,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 12,
+        "name": "ExVeemon",
+        "support": "If own Level is A, boost own Attack Power +300.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 810,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Ex-Laser",
+            "damage": 580
+        },
+        "t_attack": {
+            "name": "Power Crunch",
+            "damage": 480
+        },
+        "x_attack": {
+            "name": "Heart Breaker",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Aquilamon",
+        "support": "If own attack is [T], attack first.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 670,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Mach Impulse",
+            "damage": 570
+        },
+        "t_attack": {
+            "name": "Penetrator",
+            "damage": 450
+        },
+        "x_attack": {
+            "name": "Invisible Shot",
+            "damage": 200,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Greymon",
+        "support": "If own Level is C, boost own Attack Power +300.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 850,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Nova Blast",
+            "damage": 600
+        },
+        "t_attack": {
+            "name": "Great Antler",
+            "damage": 420
+        },
+        "x_attack": {
+            "name": "Fire Wall",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Apemon",
+        "support": "Change own Specialty to Fire. Boost own Attack Power +200.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 830,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Angry Spike",
+            "damage": 550
+        },
+        "t_attack": {
+            "name": "Bone Stick",
+            "damage": 420
+        },
+        "x_attack": {
+            "name": "Magical Monkey Punch",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 16,
+        "name": "Tyrannomon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 810,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Blaze Blaster",
+            "damage": 520
+        },
+        "t_attack": {
+            "name": "Dino Kick",
+            "damage": 380
+        },
+        "x_attack": {
+            "name": "Wild Buster",
+            "damage": 150,
+            "effect": "Nature Foe x3"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Monochromon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 950,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Volcanic Strike",
+            "damage": 540
+        },
+        "t_attack": {
+            "name": "Big Blaze",
+            "damage": 260
+        },
+        "x_attack": {
+            "name": "Guarding Tusk",
+            "damage": 200,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 18,
+        "name": "Meramon",
+        "support": "If opponent's Specialty is Ice, own Attack Power is tripled.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 740,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Fireball",
+            "damage": 550
+        },
+        "t_attack": {
+            "name": "Magma Bomb",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Heat Wave",
+            "damage": 220,
+            "effect": "Ice Foe x3"
+        }
+    },
+    {
+        "id": 19,
+        "name": "Centarumon",
+        "support": "Use [C] and Boost own [C] Attack Power +400.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 800,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Solar Ray",
+            "damage": 450
+        },
+        "t_attack": {
+            "name": "Jet Kick",
+            "damage": 360
+        },
+        "x_attack": {
+            "name": "Heat Uppercut",
+            "damage": 220,
+            "effect": "Ice Foe x3"
+        }
+    },
+    {
+        "id": 20,
+        "name": "Birdramon",
+        "support": "Attack first.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 710,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Meteor Wing",
+            "damage": 500
+        },
+        "t_attack": {
+            "name": "Fire Flap",
+            "damage": 310
+        },
+        "x_attack": {
+            "name": "Mach Grinder",
+            "damage": 130,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 21,
+        "name": "Tankmon",
+        "support": "Own HP become 10. Boost own Attack Power +500.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 1000,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Hyper Cannon",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Poison Drive",
+            "damage": 290
+        },
+        "x_attack": {
+            "name": "Sub Machine Gun",
+            "damage": 120,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 22,
+        "name": "RedVegiemon",
+        "support": "Discard all own DP Cards in DP Slot, boost own Attack Power +300.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 850,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Rotten Rainballs",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Red Zone",
+            "damage": 310
+        },
+        "x_attack": {
+            "name": "Rest",
+            "damage": 0,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 23,
+        "name": "Piddomon",
+        "support": "Own [C] Attack Power becomes same as own HP.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 750,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Fire Feather",
+            "damage": 450
+        },
+        "t_attack": {
+            "name": "Apollo Tornado",
+            "damage": 360
+        },
+        "x_attack": {
+            "name": "Bit Speed",
+            "damage": 220,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 24,
+        "name": "Akatorimon",
+        "support": "Boost own Attack Power +200.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 600,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Chicken Red Eyes",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Dirty Attack",
+            "damage": 460
+        },
+        "x_attack": {
+            "name": "Melting Aura",
+            "damage": 100,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 25,
+        "name": "BomberNanimon",
+        "support": "If both Levels are C, boost own Attack Power +400.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 650,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Free Throw Bomb",
+            "damage": 520
+        },
+        "t_attack": {
+            "name": "K.O. Punch",
+            "damage": 390
+        },
+        "x_attack": {
+            "name": "Count Down",
+            "damage": 0,
+            "effect": "Crash"
+        }
+    },
+    {
+        "id": 26,
+        "name": "Flarerizamon",
+        "support": "Change own Specialty to Fire.",
+        "level": "C",
+        "specialty": "Fire",
+        "hp": 730,
+        "dp": 20,
+        "pp": 10,
+        "c_attack": {
+            "name": "Blaze Buster",
+            "damage": 550
+        },
+        "t_attack": {
+            "name": "Tower of Fire",
+            "damage": 320
+        },
+        "x_attack": {
+            "name": "Thrusting Rush",
+            "damage": 240,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 27,
+        "name": "Agumon",
+        "support": "Boost own [C] Attack Power +300.",
+        "level": "R",
+        "specialty": "Fire",
+        "hp": 570,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Pepper Breath",
+            "damage": 380
+        },
+        "t_attack": {
+            "name": "Spirit Fire",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Cross Fire",
+            "damage": 120,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 28,
+        "name": "Solarmon",
+        "support": "None",
+        "level": "R",
+        "specialty": "Fire",
+        "hp": 500,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Solar Flare",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Soul Shocker",
+            "damage": 210
+        },
+        "x_attack": {
+            "name": "Little Burn",
+            "damage": 0,
+            "effect": "Crash"
+        }
+    },
+    {
+        "id": 29,
+        "name": "Biyomon",
+        "support": "Boost own Attack Power +200.",
+        "level": "R",
+        "specialty": "Fire",
+        "hp": 510,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Spiral Twister",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Violin Attack",
+            "damage": 170
+        },
+        "x_attack": {
+            "name": "Turbo Pecker",
+            "damage": 130,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 30,
+        "name": "Muchomon",
+        "support": "Boost own [T] Attack Power +300.",
+        "level": "R",
+        "specialty": "Fire",
+        "hp": 600,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Tropical Beak",
+            "damage": 320
+        },
+        "t_attack": {
+            "name": "Red Hot Flare",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Counter Step",
+            "damage": 0,
+            "effect": "[X] Counter"
+        }
+    },
+    {
+        "id": 31,
+        "name": "Candlemon",
+        "support": "Boost own [X] Attack Power +200.",
+        "level": "R",
+        "specialty": "Fire",
+        "hp": 480,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Flame Bomber",
+            "damage": 380
+        },
+        "t_attack": {
+            "name": "Molten Wax",
+            "damage": 270
+        },
+        "x_attack": {
+            "name": "Karmic Flame",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 32,
+        "name": "D-Otamamon",
+        "support": "If opponent's Specialty is Ice, own Attack Power is doubled.",
+        "level": "R",
+        "specialty": "Fire",
+        "hp": 550,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Boiling Bubble",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Rover Claw",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Magma Stream",
+            "damage": 150,
+            "effect": "Ice Foe x3."
+        }
+    },
+    {
+        "id": 33,
+        "name": "Goburimon",
+        "support": "None",
+        "level": "R",
+        "specialty": "Fire",
+        "hp": 500,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Goburi Bomb",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Goburi Strike",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Goburi Rush",
+            "damage": 300,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 34,
+        "name": "Vikemon",
+        "support": "None",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 2420,
+        "dp": 50,
+        "pp": 10,
+        "c_attack": {
+            "name": "Artic Blizzard",
+            "damage": 760
+        },
+        "t_attack": {
+            "name": "Viking Flare",
+            "damage": 570
+        },
+        "x_attack": {
+            "name": "Bazzoka Howl",
+            "damage": 390,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 35,
+        "name": "Omnimon II",
+        "support": "Change own Specialty to Ice. Recover own HP by +100.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 2420,
+        "dp": 60,
+        "pp": 10,
+        "c_attack": {
+            "name": "Transcendent Sword",
+            "damage": 550
+        },
+        "t_attack": {
+            "name": "Garuru Cannon",
+            "damage": 800
+        },
+        "x_attack": {
+            "name": "Double Shot",
+            "damage": 0,
+            "effect": "[X] Counter"
+        }
+    },
+    {
+        "id": 36,
+        "name": "MetalSeadramon",
+        "support": "If own Specialty is Ice, opponent's Support Effect is voided.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 2030,
+        "dp": 50,
+        "pp": 20,
+        "c_attack": {
+            "name": "River of Power",
+            "damage": 700
+        },
+        "t_attack": {
+            "name": "Hot Squeeze",
+            "damage": 450
+        },
+        "x_attack": {
+            "name": "Poseidon's Divide",
+            "damage": 400,
+            "effect": "Fire Foe x3"
+        }
+    },
+    {
+        "id": 37,
+        "name": "MetalGarurumon",
+        "support": "If own Cards in Hand 3 or more, opponent's Attack Power becomes 0.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 2250,
+        "dp": 50,
+        "pp": 20,
+        "c_attack": {
+            "name": "Metal Wolf Claw",
+            "damage": 700
+        },
+        "t_attack": {
+            "name": "Garuru Tomahawk",
+            "damage": 450
+        },
+        "x_attack": {
+            "name": "Giga Cross Freezer",
+            "damage": 400,
+            "effect": "Fire Foe x3"
+        }
+    },
+    {
+        "id": 38,
+        "name": "MarineAngemon",
+        "support": "Recover own HP by +200.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 1540,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Ocean Love",
+            "damage": 630
+        },
+        "t_attack": {
+            "name": "Marine Shot",
+            "damage": 480
+        },
+        "x_attack": {
+            "name": "Extra Smile",
+            "damage": 220,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 39,
+        "name": "WereGarurumon",
+        "support": "Add number of DP Cards in DP Slot x100 to own HP.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 1820,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Wolf Claw",
+            "damage": 670
+        },
+        "t_attack": {
+            "name": "Blow Hard",
+            "damage": 500
+        },
+        "x_attack": {
+            "name": "Moonsault Kick",
+            "damage": 0,
+            "effect": "[T] Counter"
+        }
+    },
+    {
+        "id": 40,
+        "name": "Zudomon",
+        "support": "If own Specialty is Ice, opponent's Attack Power is halved.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 2090,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Vulcan's Hammer",
+            "damage": 700
+        },
+        "t_attack": {
+            "name": "Horn &amp; Tusk",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Cold Crusher",
+            "damage": 250,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 41,
+        "name": "Panjyamon",
+        "support": "[T] Counterattack. Attack second.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 1800,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "The Fist of Ice",
+            "damage": 620
+        },
+        "t_attack": {
+            "name": "Frozen Shockwave",
+            "damage": 390
+        },
+        "x_attack": {
+            "name": "Shadow Spin Kick",
+            "damage": 0,
+            "effect": "[T] Counter"
+        }
+    },
+    {
+        "id": 42,
+        "name": "MegaSeadramon",
+        "support": "[C] Counterattack. Attack second.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 1870,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Mail Storm",
+            "damage": 650
+        },
+        "t_attack": {
+            "name": "Lightning Javelin",
+            "damage": 360
+        },
+        "x_attack": {
+            "name": "Ice Reflector",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 43,
+        "name": "WaruSeadramon",
+        "support": "Opponent's Support Effect is voided.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 1760,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Dark Blast",
+            "damage": 650
+        },
+        "t_attack": {
+            "name": "Evil Icicle",
+            "damage": 360
+        },
+        "x_attack": {
+            "name": "Strange Mist",
+            "damage": 200,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 44,
+        "name": "Brachiomon",
+        "support": "Lower opponent's [C] Attack Power to 0.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 2300,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Brachio Bubble",
+            "damage": 600
+        },
+        "t_attack": {
+            "name": "Hammerhead",
+            "damage": 380
+        },
+        "x_attack": {
+            "name": "Aqua Shatter",
+            "damage": 150,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 45,
+        "name": "BlueMeramon",
+        "support": "Lower opponent's [X] Attack Power to 0.",
+        "level": "U",
+        "specialty": "Ice",
+        "hp": 1430,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Ice Phantom",
+            "damage": 700
+        },
+        "t_attack": {
+            "name": "Cold Flame",
+            "damage": 480
+        },
+        "x_attack": {
+            "name": "Vision Blinder",
+            "damage": 360,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 46,
+        "name": "Garurumon",
+        "support": "Opponent uses [C].",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1100,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Howling Blaster",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Subzero Ice Fang",
+            "damage": 230
+        },
+        "x_attack": {
+            "name": "Ice Wall",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 47,
+        "name": "Ikkakumon",
+        "support": "If opponent's Specialty is Fire, own Attack Power is tripled.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1200,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Harpoon Torpedo",
+            "damage": 340
+        },
+        "t_attack": {
+            "name": "Heat Top",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Northen Light",
+            "damage": 200,
+            "effect": "Fire Foe x3"
+        }
+    },
+    {
+        "id": 48,
+        "name": "Dolphmon",
+        "support": "If own Attack is not [C], recover own HP by +300.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1000,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Pulse Blast",
+            "damage": 330
+        },
+        "t_attack": {
+            "name": "Dolphin Kick",
+            "damage": 290
+        },
+        "x_attack": {
+            "name": "Blast Away",
+            "damage": 200,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 49,
+        "name": "Whamon",
+        "support": "Own HP become 700.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1300,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Tidal Wave",
+            "damage": 340
+        },
+        "t_attack": {
+            "name": "Jet Arrow",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Giant Press",
+            "damage": 150,
+            "effect": "[T] to 0"
+        }
+    },
+    {
+        "id": 50,
+        "name": "Seadramon",
+        "support": "Opponent's Attack Power is halved.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1150,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Ice Blast",
+            "damage": 360
+        },
+        "t_attack": {
+            "name": "Water Shock",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Mind Freezer",
+            "damage": 100,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 51,
+        "name": "Gesomon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1030,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Coral Crusher",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Evil Punch",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Knight's Dome",
+            "damage": 160,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 52,
+        "name": "Frigimon",
+        "support": "Recover own HP by +200.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 990,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Subzero Ice Punch",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Icy Breath",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Snowball",
+            "damage": 170,
+            "effect": "Fire Foe x3"
+        }
+    },
+    {
+        "id": 53,
+        "name": "Gekomon",
+        "support": "Change opponent's Specialty to Ice.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 960,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Symphony Crusher",
+            "damage": 340
+        },
+        "t_attack": {
+            "name": "Noisy Echo",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Frog Jump",
+            "damage": 100,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 54,
+        "name": "Coelamon",
+        "support": "Lower opponent's [C] Attack Power to 0.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1270,
+        "dp": 50,
+        "pp": 10,
+        "c_attack": {
+            "name": "Fossil Bite",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Water Brick",
+            "damage": 290
+        },
+        "x_attack": {
+            "name": "Iron Scale",
+            "damage": 210,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 55,
+        "name": "Mojyamon",
+        "support": "Recover own HP by +200.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 980,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Icicle Fire",
+            "damage": 370
+        },
+        "t_attack": {
+            "name": "Bone Boomerang",
+            "damage": 290
+        },
+        "x_attack": {
+            "name": "Dancing Punch",
+            "damage": 210,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 56,
+        "name": "Shellmon",
+        "support": "If opponent used [C], change it to [X].",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1250,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Hydro Blaster",
+            "damage": 340
+        },
+        "t_attack": {
+            "name": "Drill Shell",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Spin Shatter",
+            "damage": 150,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 57,
+        "name": "Sorcerimon",
+        "support": "Change own Specialty to Ice.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 900,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Crystal Cloud",
+            "damage": 440
+        },
+        "t_attack": {
+            "name": "Drowning Aquarius",
+            "damage": 370
+        },
+        "x_attack": {
+            "name": "Ice Illusion",
+            "damage": 170,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 58,
+        "name": "IceDevimon",
+        "support": "If opponent's Specialty is fire, own Attack Power is tripled.",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 990,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Frost Claw",
+            "damage": 390
+        },
+        "t_attack": {
+            "name": "Icy Shower",
+            "damage": 290
+        },
+        "x_attack": {
+            "name": "Sub Zero Freeze",
+            "damage": 180,
+            "effect": "Fire Foe x3"
+        }
+    },
+    {
+        "id": 59,
+        "name": "Hyogamon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1200,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Icy Cudgel",
+            "damage": 460
+        },
+        "t_attack": {
+            "name": "Ice Mace",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Snow Barrier",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 60,
+        "name": "Icemon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Ice",
+        "hp": 1140,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Iceball Bomb",
+            "damage": 370
+        },
+        "t_attack": {
+            "name": "Ice Block",
+            "damage": 240
+        },
+        "x_attack": {
+            "name": "Ice Strike",
+            "damage": 0,
+            "effect": "[X] Counter"
+        }
+    },
+    {
+        "id": 61,
+        "name": "Gomamon",
+        "support": "Lower opponent's [T] Attack Power to 0.",
+        "level": "R",
+        "specialty": "Ice",
+        "hp": 700,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Marching Fishes",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Sharp Edge",
+            "damage": 240
+        },
+        "x_attack": {
+            "name": "Big Wave Attack",
+            "damage": 200,
+            "effect": "[T] to 0"
+        }
+    },
+    {
+        "id": 62,
+        "name": "Gabumon",
+        "support": "None",
+        "level": "R",
+        "specialty": "Ice",
+        "hp": 680,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Blue Blaster",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Little Horn",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Hidden Punch",
+            "damage": 140,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 63,
+        "name": "Betamon",
+        "support": "If own HP are less then 200, reduce opponent's Attack Power to 0.",
+        "level": "R",
+        "specialty": "Ice",
+        "hp": 730,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Electric Shock",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Fin Cutter",
+            "damage": 190
+        },
+        "x_attack": {
+            "name": "Water Tower",
+            "damage": 170,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 64,
+        "name": "Penguinmon",
+        "support": "If opponent's Specialty is Fire, reduce opponent's Attack Power to 0.",
+        "level": "R",
+        "specialty": "Ice",
+        "hp": 670,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Eternal Slapping",
+            "damage": 320
+        },
+        "t_attack": {
+            "name": "Sliding Attack",
+            "damage": 180
+        },
+        "x_attack": {
+            "name": "Ice Prism",
+            "damage": 0,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 65,
+        "name": "Gizamon",
+        "support": "If opponent's Specialty is Fire, own Attack Power is doubled.",
+        "level": "R",
+        "specialty": "Ice",
+        "hp": 650,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Spiral Saw",
+            "damage": 260
+        },
+        "t_attack": {
+            "name": "Frog Kick",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Water Cure",
+            "damage": 150,
+            "effect": "Fire Foe x3"
+        }
+    },
+    {
+        "id": 66,
+        "name": "Otamamon",
+        "support": "Reduce opponent's [C] Attack Power to 0.",
+        "level": "R",
+        "specialty": "Ice",
+        "hp": 710,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Stun Bubble",
+            "damage": 330
+        },
+        "t_attack": {
+            "name": "Kid Claw",
+            "damage": 130
+        },
+        "x_attack": {
+            "name": "Wrapping Bubble",
+            "damage": 100,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 67,
+        "name": "SnowAgumon",
+        "support": "Reduce opponent's [X] Attack Power to 0.",
+        "level": "R",
+        "specialty": "Ice",
+        "hp": 720,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Hail Storm",
+            "damage": 160
+        },
+        "t_attack": {
+            "name": "Little Blizzard",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Freeze Beam",
+            "damage": 220,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 68,
+        "name": "SnowGoburimon",
+        "support": "None",
+        "level": "R",
+        "specialty": "Ice",
+        "hp": 770,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Bolt Strike",
+            "damage": 230
+        },
+        "t_attack": {
+            "name": "Snow Gobu Mace",
+            "damage": 230
+        },
+        "x_attack": {
+            "name": "Freezing Gobu Breath",
+            "damage": 230,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 69,
+        "name": "Valkyrimon",
+        "support": "Opponent uses O.",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1590,
+        "dp": 50,
+        "pp": 20,
+        "c_attack": {
+            "name": "Feral Sword",
+            "damage": 840
+        },
+        "t_attack": {
+            "name": "Laser Javelin",
+            "damage": 550
+        },
+        "x_attack": {
+            "name": "Punishing Storm",
+            "damage": 350,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 70,
+        "name": "Seraphimon",
+        "support": "If opponent's Specialty is Darkness, own Attack Power is +200 &amp; HP +200.",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1650,
+        "dp": 50,
+        "pp": 20,
+        "c_attack": {
+            "name": "Seventh Heaven",
+            "damage": 900
+        },
+        "t_attack": {
+            "name": "Rising Halo",
+            "damage": 510
+        },
+        "x_attack": {
+            "name": "Divine Breaker",
+            "damage": 420,
+            "effect": "Dark Foe x3"
+        }
+    },
+    {
+        "id": 71,
+        "name": "Magnadramon",
+        "support": "[X] Counterattack. Attack second.",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1870,
+        "dp": 50,
+        "pp": 20,
+        "c_attack": {
+            "name": "Fire Tornado",
+            "damage": 800
+        },
+        "t_attack": {
+            "name": "Apocalypse",
+            "damage": 610
+        },
+        "x_attack": {
+            "name": "Hermit Fog",
+            "damage": 370,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 72,
+        "name": "AeroVeedramon",
+        "support": "If own level is U, own Attack Power is doubled.",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1430,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "V Wing Blade",
+            "damage": 750
+        },
+        "t_attack": {
+            "name": "Twister Saber",
+            "damage": 550
+        },
+        "x_attack": {
+            "name": "Magnum Clash",
+            "damage": 360,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 73,
+        "name": "Rosemon",
+        "support": "If opponent's HP are 1000+, own attack becomes \"Eat-up HP.\"",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1210,
+        "dp": 40,
+        "pp": 30,
+        "c_attack": {
+            "name": "Thorny Whipping",
+            "damage": 720
+        },
+        "t_attack": {
+            "name": "Rose Spear",
+            "damage": 480
+        },
+        "x_attack": {
+            "name": "Facination",
+            "damage": 320,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 74,
+        "name": "HerculesKabuterimon",
+        "support": "None",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1700,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Giga Scissor Claw",
+            "damage": 790
+        },
+        "t_attack": {
+            "name": "Hyper Mega Blaster",
+            "damage": 490
+        },
+        "x_attack": {
+            "name": "Horn Buster II",
+            "damage": 250,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 75,
+        "name": "MagnaAngemon",
+        "support": "If opponent's Specialty is Darkness, boost own Attack Power +500.",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1320,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "The Gate of Destiny",
+            "damage": 770
+        },
+        "t_attack": {
+            "name": "Excalibur",
+            "damage": 570
+        },
+        "x_attack": {
+            "name": "Soul Vanisher",
+            "damage": 370,
+            "effect": "Darkness Foe x3"
+        }
+    },
+    {
+        "id": 76,
+        "name": "Silphymon",
+        "support": "If opponent's Specialty is not Nature, attack second.",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1540,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Top Gun",
+            "damage": 680
+        },
+        "t_attack": {
+            "name": "Dual Sonic Boom",
+            "damage": 500
+        },
+        "x_attack": {
+            "name": "Air Field",
+            "damage": 400,
+            "effect": "[T] to 0"
+        }
+    },
+    {
+        "id": 77,
+        "name": "Angewomon",
+        "support": "If opponent's Specialty is Darkness, recover own HP by +500.",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1370,
+        "dp": 40,
+        "pp": 30,
+        "c_attack": {
+            "name": "Celestial Arrow",
+            "damage": 720
+        },
+        "t_attack": {
+            "name": "Heaven's Charm",
+            "damage": 520
+        },
+        "x_attack": {
+            "name": "Holy Air",
+            "damage": 330,
+            "effect": "Darkness Foe x3"
+        }
+    },
+    {
+        "id": 78,
+        "name": "Lillymon",
+        "support": "Recover own HP by +200.",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1100,
+        "dp": 30,
+        "pp": 30,
+        "c_attack": {
+            "name": "Flower Cannon",
+            "damage": 650
+        },
+        "t_attack": {
+            "name": "Vicious Vine",
+            "damage": 340
+        },
+        "x_attack": {
+            "name": "Temptation",
+            "damage": 200,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 79,
+        "name": "MegaKabuterimon",
+        "support": "None",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1480,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Horn Buster",
+            "damage": 700
+        },
+        "t_attack": {
+            "name": "Electro Shocker",
+            "damage": 400
+        },
+        "x_attack": {
+            "name": "Wild Scratcher",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 80,
+        "name": "Piximon",
+        "support": "Opponent's Support Effect is voided. Own Attack Power is halved.",
+        "level": "U",
+        "specialty": "Nature",
+        "hp": 1370,
+        "dp": 40,
+        "pp": 30,
+        "c_attack": {
+            "name": "BIT Bomb",
+            "damage": 670
+        },
+        "t_attack": {
+            "name": "Fairy Tale",
+            "damage": 430
+        },
+        "x_attack": {
+            "name": "Victory Trick",
+            "damage": 320,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 81,
+        "name": "Veedramon",
+        "support": "If own level is U, own Attack Power is doubled.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 880,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "V-Nova Blast",
+            "damage": 500
+        },
+        "t_attack": {
+            "name": "Hammer Punch",
+            "damage": 360
+        },
+        "x_attack": {
+            "name": "Cutting Shoot",
+            "damage": 200,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 82,
+        "name": "Angemon",
+        "support": "If opponent's Specialty is Darkness, own Attack Power is tripled.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 940,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Hand of Fate",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Omni Typhoon",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Holy Rod",
+            "damage": 260,
+            "effect": "Darkness Foe x3"
+        }
+    },
+    {
+        "id": 83,
+        "name": "R-Gatomon",
+        "support": "If own HP are less than 500, boost own Attack Power +300.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 750,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Lightning Paw",
+            "damage": 410
+        },
+        "t_attack": {
+            "name": "Lightning Kick",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Cat's Eyes",
+            "damage": 210,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 84,
+        "name": "Togemon",
+        "support": "Boost own Attack Power +100.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 800,
+        "dp": 30,
+        "pp": 30,
+        "c_attack": {
+            "name": "Needle Spray",
+            "damage": 380
+        },
+        "t_attack": {
+            "name": "Coconut Punch",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Fast Jab",
+            "damage": 170,
+            "effect": "[T] to 0"
+        }
+    },
+    {
+        "id": 85,
+        "name": "Leomon",
+        "support": "If own level is lower, boost own Attack Power +500.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 890,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Beast King's Fist",
+            "damage": 430
+        },
+        "t_attack": {
+            "name": "Lion Sword",
+            "damage": 280
+        },
+        "x_attack": {
+            "name": "Smashing Kick",
+            "damage": 200,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 86,
+        "name": "Kabuterimon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 950,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Electro Shocker",
+            "damage": 550
+        },
+        "t_attack": {
+            "name": "Big Horn",
+            "damage": 360
+        },
+        "x_attack": {
+            "name": "Quick Thrust",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 87,
+        "name": "Airdramon",
+        "support": "Recover own HP by +100. Boost own Attack Power by +100.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 950,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Spinning Needle",
+            "damage": 430
+        },
+        "t_attack": {
+            "name": "Wing Cutter",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Tail Whip",
+            "damage": 50,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 88,
+        "name": "Unimon",
+        "support": "If opponent's Specialty is Darkness, lower opponent's Attack Power to 0.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 950,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Aerial Attack",
+            "damage": 390
+        },
+        "t_attack": {
+            "name": "Javelin Thrust",
+            "damage": 210
+        },
+        "x_attack": {
+            "name": "Spread Nails",
+            "damage": 150,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 89,
+        "name": "Ninjamon",
+        "support": "Attack first.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 650,
+        "dp": 30,
+        "pp": 30,
+        "c_attack": {
+            "name": "Ninja Knife Throw",
+            "damage": 440
+        },
+        "t_attack": {
+            "name": "Dancing Leaves",
+            "damage": 350
+        },
+        "x_attack": {
+            "name": "Ninja Jujitsu",
+            "damage": 250,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 90,
+        "name": "Kuwagamon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 900,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Scissor Claw",
+            "damage": 530
+        },
+        "t_attack": {
+            "name": "Power Guillotine",
+            "damage": 400
+        },
+        "x_attack": {
+            "name": "Trapping Scissors",
+            "damage": 0,
+            "effect": "[T] Counter"
+        }
+    },
+    {
+        "id": 91,
+        "name": "Drimogemon",
+        "support": "Boost own Attack Power +200.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 850,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Iron Drill Spin",
+            "damage": 450
+        },
+        "t_attack": {
+            "name": "Bone Crusher",
+            "damage": 310
+        },
+        "x_attack": {
+            "name": "Screw Claw",
+            "damage": 280,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 92,
+        "name": "Vegiemon",
+        "support": "Changes opponent's Specialty to Nature.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 810,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Compost Bomber",
+            "damage": 390
+        },
+        "t_attack": {
+            "name": "Sharp Leaf",
+            "damage": 270
+        },
+        "x_attack": {
+            "name": "Sweet Whisper",
+            "damage": 100,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 93,
+        "name": "Kokatorimon",
+        "support": "Lower opponent's Attack Power to 0. Opponent's HP are doubled.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 910,
+        "dp": 30,
+        "pp": 20,
+        "c_attack": {
+            "name": "Frozen Fire Shot",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Sliding Beak",
+            "damage": 260
+        },
+        "x_attack": {
+            "name": "Gangster",
+            "damage": 150,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 94,
+        "name": "Yanmamon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 740,
+        "dp": 20,
+        "pp": 20,
+        "c_attack": {
+            "name": "Thunder Ray",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Bug Swarm",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Somersault Attack",
+            "damage": 170,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 95,
+        "name": "J-Mojyamon",
+        "support": "If own Level is R, boost own Attack Power +300.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 750,
+        "dp": 30,
+        "pp": 30,
+        "c_attack": {
+            "name": "Jungle Punch",
+            "damage": 280
+        },
+        "t_attack": {
+            "name": "Jungle Bone",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Jungle Head Butt",
+            "damage": 180,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 96,
+        "name": "MoriShellmon",
+        "support": "If opponent's Specialty is Darkness, lower opponent's Attack Power -200.",
+        "level": "C",
+        "specialty": "Nature",
+        "hp": 910,
+        "dp": 40,
+        "pp": 30,
+        "c_attack": {
+            "name": "Shell Pile",
+            "damage": 390
+        },
+        "t_attack": {
+            "name": "Mind Fog",
+            "damage": 240
+        },
+        "x_attack": {
+            "name": "Invisible Tackle",
+            "damage": 190,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 97,
+        "name": "Tentomon",
+        "support": "None",
+        "level": "R",
+        "specialty": "Nature",
+        "hp": 670,
+        "dp": 0,
+        "pp": 30,
+        "c_attack": {
+            "name": "Blue Blaster",
+            "damage": 380
+        },
+        "t_attack": {
+            "name": "Double Punch",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Rolling Guard",
+            "damage": 160,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 98,
+        "name": "Palmon",
+        "support": "None",
+        "level": "R",
+        "specialty": "Nature",
+        "hp": 500,
+        "dp": 0,
+        "pp": 30,
+        "c_attack": {
+            "name": "Poison Ivy",
+            "damage": 370
+        },
+        "t_attack": {
+            "name": "Plant Shock",
+            "damage": 240
+        },
+        "x_attack": {
+            "name": "Root Breaker",
+            "damage": 160,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 99,
+        "name": "Salamon",
+        "support": "Changes own Specialty to Nature. Draw 1 Card.",
+        "level": "R",
+        "specialty": "Nature",
+        "hp": 600,
+        "dp": 0,
+        "pp": 30,
+        "c_attack": {
+            "name": "Puppy Howling",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Petit Punch",
+            "damage": 230
+        },
+        "x_attack": {
+            "name": "Sledge Crash",
+            "damage": 0,
+            "effect": "[T] Counter"
+        }
+    },
+    {
+        "id": 100,
+        "name": "Elecmon",
+        "support": "If opponent's Specialty is Ice, boost own Attack Power +300.",
+        "level": "R",
+        "specialty": "Nature",
+        "hp": 650,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Super Thunder Strike",
+            "damage": 310
+        },
+        "t_attack": {
+            "name": "Nine Tails",
+            "damage": 240
+        },
+        "x_attack": {
+            "name": "Lightning Knife",
+            "damage": 130,
+            "effect": "Ice Foe x3"
+        }
+    },
+    {
+        "id": 101,
+        "name": "Gotsumon",
+        "support": "If own HP are more than opponent's HP, own Attack Power is doubled.",
+        "level": "R",
+        "specialty": "Nature",
+        "hp": 700,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Rock Fist",
+            "damage": 290
+        },
+        "t_attack": {
+            "name": "Hardest Punch",
+            "damage": 180
+        },
+        "x_attack": {
+            "name": "Earth Shaker",
+            "damage": 130,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 102,
+        "name": "Kunemon",
+        "support": "Lower both Attack Powers -200.",
+        "level": "R",
+        "specialty": "Nature",
+        "hp": 680,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Electric Thread",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Poison Ride",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Speeding Thread",
+            "damage": 190,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 103,
+        "name": "Apokarimon",
+        "support": "Own HP are halved. Change own Specialty to Darkness.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 2750,
+        "dp": 70,
+        "pp": 0,
+        "c_attack": {
+            "name": "Darkness Zone",
+            "damage": 990
+        },
+        "t_attack": {
+            "name": "Dark Evolution",
+            "damage": 680
+        },
+        "x_attack": {
+            "name": "Grand Big Bang",
+            "damage": 0,
+            "effect": "Crash"
+        }
+    },
+    {
+        "id": 104,
+        "name": "GranKuwagamon",
+        "support": "Discard 7 Cards from own Online Deck. Opponent's HP are halved.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1760,
+        "dp": 50,
+        "pp": 10,
+        "c_attack": {
+            "name": "X-Scissor Claw",
+            "damage": 800
+        },
+        "t_attack": {
+            "name": "Grand Darkness",
+            "damage": 700
+        },
+        "x_attack": {
+            "name": "Z Black Hole",
+            "damage": 600,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 105,
+        "name": "Diaboromon",
+        "support": "Own HP become 10. Changes opponent's Specialty to Darkness.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 2580,
+        "dp": 70,
+        "pp": 0,
+        "c_attack": {
+            "name": "Inferno Missile",
+            "damage": 970
+        },
+        "t_attack": {
+            "name": "Tentacle Bug",
+            "damage": 720
+        },
+        "x_attack": {
+            "name": "Lost Paradise",
+            "damage": 0,
+            "effect": "Crash"
+        }
+    },
+    {
+        "id": 106,
+        "name": "VenomMyotismon",
+        "support": "None",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 2310,
+        "dp": 60,
+        "pp": 0,
+        "c_attack": {
+            "name": "Venom Infusion",
+            "damage": 920
+        },
+        "t_attack": {
+            "name": "Tyrant Savage",
+            "damage": 530
+        },
+        "x_attack": {
+            "name": "Chaos Flame",
+            "damage": 400,
+            "effect": "Nature Foe x3"
+        }
+    },
+    {
+        "id": 107,
+        "name": "Piedmon",
+        "support": "Both players discard all Cards in Hands.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1650,
+        "dp": 50,
+        "pp": 10,
+        "c_attack": {
+            "name": "Trump Sword",
+            "damage": 800
+        },
+        "t_attack": {
+            "name": "Finishing Sniper",
+            "damage": 500
+        },
+        "x_attack": {
+            "name": "Clown's Trick",
+            "damage": 400,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 108,
+        "name": "Machinedramon",
+        "support": "None",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 2400,
+        "dp": 60,
+        "pp": 0,
+        "c_attack": {
+            "name": "Giga Cannon",
+            "damage": 980
+        },
+        "t_attack": {
+            "name": "Booster Claw",
+            "damage": 520
+        },
+        "x_attack": {
+            "name": "Catastrophic Day",
+            "damage": 0,
+            "effect": "Crash"
+        }
+    },
+    {
+        "id": 109,
+        "name": "Infermon",
+        "support": "Discard 5 Cards from own Online Deck. Boost own Attack Power +400.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1100,
+        "dp": 20,
+        "pp": 0,
+        "c_attack": {
+            "name": "Hades' Grenade",
+            "damage": 610
+        },
+        "t_attack": {
+            "name": "Cocoon Crash",
+            "damage": 370
+        },
+        "x_attack": {
+            "name": "Virus Shot",
+            "damage": 180,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 110,
+        "name": "LadyDevimon",
+        "support": "Both players boost Attack Power +200.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1150,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Darkness Wave",
+            "damage": 620
+        },
+        "t_attack": {
+            "name": "Darkness Spear",
+            "damage": 360
+        },
+        "x_attack": {
+            "name": "Poison",
+            "damage": 250,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 111,
+        "name": "Myotismon",
+        "support": "Digimon KO'd in battle revives with 500 HP. Battle is still lost.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1100,
+        "dp": 50,
+        "pp": 20,
+        "c_attack": {
+            "name": "Grisly Wing",
+            "damage": 650
+        },
+        "t_attack": {
+            "name": "Cloud Minion",
+            "damage": 400
+        },
+        "x_attack": {
+            "name": "Bloody Storm",
+            "damage": 300,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 112,
+        "name": "Megadramon",
+        "support": "Both players' HP are halved.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1810,
+        "dp": 50,
+        "pp": 0,
+        "c_attack": {
+            "name": "Darkside Attack",
+            "damage": 920
+        },
+        "t_attack": {
+            "name": "Big Mega Fire",
+            "damage": 290
+        },
+        "x_attack": {
+            "name": "Ultimate Attack",
+            "damage": 300,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 113,
+        "name": "SkullGreymon",
+        "support": "If opponent's Specialty is Nature, opponent discards all Cards.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1700,
+        "dp": 50,
+        "pp": 0,
+        "c_attack": {
+            "name": "Dark Shot II",
+            "damage": 960
+        },
+        "t_attack": {
+            "name": "Dark Shot",
+            "damage": 350
+        },
+        "x_attack": {
+            "name": "Buffalo Breathe",
+            "damage": 450,
+            "effect": "Nature Foe x3"
+        }
+    },
+    {
+        "id": 114,
+        "name": "Phantomon",
+        "support": "Discard 7 Cards from own Online Deck, own Attack is \"Eat-up HP.\"",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1100,
+        "dp": 30,
+        "pp": 0,
+        "c_attack": {
+            "name": "Shadow Scythe",
+            "damage": 600
+        },
+        "t_attack": {
+            "name": "Diabolic Star",
+            "damage": 400
+        },
+        "x_attack": {
+            "name": "Dark Sentence",
+            "damage": 300,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 115,
+        "name": "WaruMonzaemon",
+        "support": "Own HP become 10. Own Attack Power is doubled.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1590,
+        "dp": 40,
+        "pp": 0,
+        "c_attack": {
+            "name": "Heart Break Attack",
+            "damage": 700
+        },
+        "t_attack": {
+            "name": "Bear Claw",
+            "damage": 440
+        },
+        "x_attack": {
+            "name": "Nasty Step",
+            "damage": 200,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 116,
+        "name": "Andromon",
+        "support": "Own HP are halved. Boost own Attack Power +400.",
+        "level": "U",
+        "specialty": "Darkness",
+        "hp": 1700,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Lightning Blade",
+            "damage": 690
+        },
+        "t_attack": {
+            "name": "Gatling Missiles",
+            "damage": 590
+        },
+        "x_attack": {
+            "name": "Weak Slap",
+            "damage": 150,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 117,
+        "name": "Stingmon",
+        "support": "Discard 1 DP Card from own DP Slot. Boost own Attack Power +200.",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 880,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Spiking Strike",
+            "damage": 530
+        },
+        "t_attack": {
+            "name": "Moon Shooter",
+            "damage": 370
+        },
+        "x_attack": {
+            "name": "Hot Squeeze",
+            "damage": 270,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 118,
+        "name": "Wizardmon",
+        "support": "Discard all Cards in own Hand, then draw 2 Cards.",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 850,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Thunder Ball",
+            "damage": 540
+        },
+        "t_attack": {
+            "name": "Magic Game",
+            "damage": 370
+        },
+        "x_attack": {
+            "name": "Vision of Terror",
+            "damage": 220,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 119,
+        "name": "Devidramon",
+        "support": "Own Attack becomes [T].",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 1100,
+        "dp": 50,
+        "pp": 10,
+        "c_attack": {
+            "name": "Crimson Claw",
+            "damage": 520
+        },
+        "t_attack": {
+            "name": "Red Eye",
+            "damage": 440
+        },
+        "x_attack": {
+            "name": "Dark Gale",
+            "damage": 370,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 120,
+        "name": "Devimon",
+        "support": "If opponent's Specialty is Nature, own Attack Power is tripled.",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 960,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Evil Wing",
+            "damage": 490
+        },
+        "t_attack": {
+            "name": "Laser Wing",
+            "damage": 350
+        },
+        "x_attack": {
+            "name": "Dungeon Curse",
+            "damage": 250,
+            "effect": "Nature Foe x3"
+        }
+    },
+    {
+        "id": 121,
+        "name": "Tuskmon",
+        "support": "Own Attack becomes [X].",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 1150,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Slamming Tusk",
+            "damage": 410
+        },
+        "t_attack": {
+            "name": "Horn Driver",
+            "damage": 360
+        },
+        "x_attack": {
+            "name": "Bayonet Lancer",
+            "damage": 300,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 122,
+        "name": "Ogremon",
+        "support": "Discard Cards in own DP Slot and multiply Attack Power by number of discards.",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 1050,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Pummel Whack",
+            "damage": 530
+        },
+        "t_attack": {
+            "name": "Bone Mace",
+            "damage": 320
+        },
+        "x_attack": {
+            "name": "Faint Punch",
+            "damage": 0,
+            "effect": "[T] Counter"
+        }
+    },
+    {
+        "id": 123,
+        "name": "Bakemon",
+        "support": "Change own Specialty to Darkness.",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 860,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Dark Claw",
+            "damage": 450
+        },
+        "t_attack": {
+            "name": "Ghost Chop",
+            "damage": 270
+        },
+        "x_attack": {
+            "name": "Dark Charm",
+            "damage": 170,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 124,
+        "name": "Guardromon",
+        "support": "Own HP are halved. Boost own Attack Power +300.",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 750,
+        "dp": 20,
+        "pp": 10,
+        "c_attack": {
+            "name": "Protect Grenade",
+            "damage": 430
+        },
+        "t_attack": {
+            "name": "Warning Laser",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Red Alert",
+            "damage": 0,
+            "effect": "Crash"
+        }
+    },
+    {
+        "id": 125,
+        "name": "Tekkamon",
+        "support": "Both players boost Attack Power +300.",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 1100,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Electronic Blast Sword",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Skull Stand",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Frag Bomb",
+            "damage": 0,
+            "effect": "Crash"
+        }
+    },
+    {
+        "id": 126,
+        "name": "Gururumon",
+        "support": "Both players use [T].",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 1040,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Chaos Blaster",
+            "damage": 470
+        },
+        "t_attack": {
+            "name": "Karate Kilo Byte",
+            "damage": 340
+        },
+        "x_attack": {
+            "name": "Dark Moonsault",
+            "damage": 100,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 127,
+        "name": "Soulmon",
+        "support": "Discard 1 Card in DP Slot. change opponent's Specialty to Darkness.",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 500,
+        "dp": 30,
+        "pp": 0,
+        "c_attack": {
+            "name": "Necro Magic",
+            "damage": 330
+        },
+        "t_attack": {
+            "name": "Finishing Trance",
+            "damage": 310
+        },
+        "x_attack": {
+            "name": "Energy Drain",
+            "damage": 290,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 128,
+        "name": "Fugamon",
+        "support": "Own Attack becomes [C].",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 940,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Evil Hurricane",
+            "damage": 460
+        },
+        "t_attack": {
+            "name": "Heavy Swing",
+            "damage": 430
+        },
+        "x_attack": {
+            "name": "Damp Cloud",
+            "damage": 400,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 129,
+        "name": "Saberdramon",
+        "support": "Both players use [X].",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 670,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Black Saber",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Nitro Arrow",
+            "damage": 150
+        },
+        "x_attack": {
+            "name": "Mach Shadow",
+            "damage": 240,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 130,
+        "name": "Darkrizamon",
+        "support": "Both players use [C].",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 890,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Dark Flare",
+            "damage": 330
+        },
+        "t_attack": {
+            "name": "Snipping Fang",
+            "damage": 440
+        },
+        "x_attack": {
+            "name": "Dark Pain",
+            "damage": 30,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 131,
+        "name": "Zassomon",
+        "support": "Opponent's Attack Power become 300.",
+        "level": "C",
+        "specialty": "Darkness",
+        "hp": 600,
+        "dp": 20,
+        "pp": 0,
+        "c_attack": {
+            "name": "Deadly Ivy",
+            "damage": 480
+        },
+        "t_attack": {
+            "name": "Deadly Weed",
+            "damage": 410
+        },
+        "x_attack": {
+            "name": "Head Harvest",
+            "damage": 350,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 132,
+        "name": "DemiDevimon",
+        "support": "If opponent's Specialty is Nature, own Attack Power is doubled.",
+        "level": "R",
+        "specialty": "Darkness",
+        "hp": 490,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Demi Dart",
+            "damage": 360
+        },
+        "t_attack": {
+            "name": "Evil Wisper",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Butt Smasher",
+            "damage": 190,
+            "effect": "Nature Foe x3"
+        }
+    },
+    {
+        "id": 133,
+        "name": "BKGatomon",
+        "support": "If opponent's Level is A, opponent's HP are halved.",
+        "level": "R",
+        "specialty": "Darkness",
+        "hp": 520,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Lightning Paw",
+            "damage": 360
+        },
+        "t_attack": {
+            "name": "Lightning Kick",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Cat's Eyes",
+            "damage": 240,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 134,
+        "name": "Kokuwamon",
+        "support": "Reduce own Attack Power by -100. Recover own HP by +200.",
+        "level": "R",
+        "specialty": "Darkness",
+        "hp": 670,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Mini Scissor Claws",
+            "damage": 270
+        },
+        "t_attack": {
+            "name": "Stun Shock",
+            "damage": 240
+        },
+        "x_attack": {
+            "name": "Dis-Assembler",
+            "damage": 200,
+            "effect": "[T] to 0"
+        }
+    },
+    {
+        "id": 135,
+        "name": "Tsukaimon",
+        "support": "Boost own [X] Attack Power +200. [C] &amp; [T] Attack Power are 0.",
+        "level": "R",
+        "specialty": "Darkness",
+        "hp": 630,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Evil Spell",
+            "damage": 240
+        },
+        "t_attack": {
+            "name": "Fluffy Attack",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Purple Fog",
+            "damage": 160,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 136,
+        "name": "Dokunemon",
+        "support": "If opponent's Specialty is Rare, opponent's HP become 100.",
+        "level": "R",
+        "specialty": "Darkness",
+        "hp": 650,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Worm Venom",
+            "damage": 280
+        },
+        "t_attack": {
+            "name": "Bug Shower",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Capturing Net",
+            "damage": 190,
+            "effect": "Rare Foe x3"
+        }
+    },
+    {
+        "id": 137,
+        "name": "Aruraumon",
+        "support": "Own Attack becomes \"Eat-up HP.\" Own Attack Power is halved.",
+        "level": "R",
+        "specialty": "Darkness",
+        "hp": 420,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Nemesis Ivy",
+            "damage": 340
+        },
+        "t_attack": {
+            "name": "Gloomy Dust",
+            "damage": 240
+        },
+        "x_attack": {
+            "name": "Hungry Hand",
+            "damage": 190,
+            "effect": "Eat-up HP"
+        }
+    },
+    {
+        "id": 138,
+        "name": "Sharmamon",
+        "support": "Opponent's HP are halved. opponent's Attack Power is doubled.",
+        "level": "R",
+        "specialty": "Darkness",
+        "hp": 570,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Sharma Hammer",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Mad Twister",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Dancing Bone",
+            "damage": 100,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 139,
+        "name": "Puppetmon",
+        "support": "Discard 1 of opponent's Cards in DP Slot. Draw 1 Card.",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1540,
+        "dp": 50,
+        "pp": 10,
+        "c_attack": {
+            "name": "Puppet Pummel",
+            "damage": 790
+        },
+        "t_attack": {
+            "name": "Clean Sweep",
+            "damage": 570
+        },
+        "x_attack": {
+            "name": "Big Liar",
+            "damage": 380,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 140,
+        "name": "SuperStarmon",
+        "support": "If opponent's Specialty is Rare, lower opponent's Attack Power to 0.",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1650,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Comet Cluster",
+            "damage": 730
+        },
+        "t_attack": {
+            "name": "Galactic Eyes",
+            "damage": 600
+        },
+        "x_attack": {
+            "name": "Super Star Seeker",
+            "damage": 380,
+            "effect": "Rare Foe x3"
+        }
+    },
+    {
+        "id": 141,
+        "name": "MetalEtemon",
+        "support": "[C] Counterattack. Attack second.",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1650,
+        "dp": 50,
+        "pp": 10,
+        "c_attack": {
+            "name": "Banana Slip",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Heavymon Kick",
+            "damage": 750
+        },
+        "x_attack": {
+            "name": "Dark Sonic Boom",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 142,
+        "name": "Shakkoumon",
+        "support": "Recover own HP by +100. Boost own [X] Attack Power by +100.",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1760,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Clay Bomb",
+            "damage": 680
+        },
+        "t_attack": {
+            "name": "Wild Spirit",
+            "damage": 520
+        },
+        "x_attack": {
+            "name": "Super Spirit",
+            "damage": 300,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 143,
+        "name": "Jijimon",
+        "support": "If opponent's Specialty is Darkness, lower opponent's Attack Power to 0.",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1260,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Dark Noose",
+            "damage": 650
+        },
+        "t_attack": {
+            "name": "Gentle Punch",
+            "damage": 560
+        },
+        "x_attack": {
+            "name": "Guard Stick",
+            "damage": 250,
+            "effect": "[T] to 0"
+        }
+    },
+    {
+        "id": 144,
+        "name": "Digitamamon",
+        "support": "Swap own Specialty with opponent's Specialty.",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1810,
+        "dp": 50,
+        "pp": 10,
+        "c_attack": {
+            "name": "Nightmare Syndromer",
+            "damage": 800
+        },
+        "t_attack": {
+            "name": "Hyper Flashing",
+            "damage": 540
+        },
+        "x_attack": {
+            "name": "Stinky Egg",
+            "damage": 300,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 145,
+        "name": "Vademon",
+        "support": "Opponent's Specialty becomes the same as own Specialty.",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1370,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Alien Ray",
+            "damage": 850
+        },
+        "t_attack": {
+            "name": "Mutilator",
+            "damage": 600
+        },
+        "x_attack": {
+            "name": "Evil Kiss",
+            "damage": 200,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 146,
+        "name": "Giromon",
+        "support": "Opponent uses [X].",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1900,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Big Bang Boom",
+            "damage": 720
+        },
+        "t_attack": {
+            "name": "Guillo-Chain Saw",
+            "damage": 520
+        },
+        "x_attack": {
+            "name": "Over Run",
+            "damage": 0,
+            "effect": "Crash"
+        }
+    },
+    {
+        "id": 147,
+        "name": "Monzaemon",
+        "support": "Recover own HP by +200. Boost own Attack Power by +100.",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 2030,
+        "dp": 50,
+        "pp": 20,
+        "c_attack": {
+            "name": "Hearts Attack",
+            "damage": 850
+        },
+        "t_attack": {
+            "name": "Bang Bang Punch",
+            "damage": 500
+        },
+        "x_attack": {
+            "name": "Silent Bear Hug",
+            "damage": 430,
+            "effect": "Darkness Foe x3"
+        }
+    },
+    {
+        "id": 148,
+        "name": "MetalMamemon",
+        "support": "None",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1920,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Energetic Bomb",
+            "damage": 770
+        },
+        "t_attack": {
+            "name": "Magnetic Beam",
+            "damage": 570
+        },
+        "x_attack": {
+            "name": "Shaft Spike",
+            "damage": 280,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 149,
+        "name": "Mamemon",
+        "support": "None",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1700,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Smiley Bomb",
+            "damage": 820
+        },
+        "t_attack": {
+            "name": "One-Two Punch",
+            "damage": 650
+        },
+        "x_attack": {
+            "name": "Diving Attack",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 150,
+        "name": "Etemon",
+        "support": "Lower opponent's [X] Attack Power to 0.",
+        "level": "U",
+        "specialty": "Rare",
+        "hp": 1480,
+        "dp": 40,
+        "pp": 20,
+        "c_attack": {
+            "name": "Dark Network",
+            "damage": 700
+        },
+        "t_attack": {
+            "name": "Monkey Kick",
+            "damage": 530
+        },
+        "x_attack": {
+            "name": "Concert Crush",
+            "damage": 150,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 151,
+        "name": "Ankylomon",
+        "support": "If opponent has more than 2 Cards in DP Slot, his Attack Power is 0.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 1000,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Tail Hammer",
+            "damage": 420
+        },
+        "t_attack": {
+            "name": "Armored Stampede",
+            "damage": 240
+        },
+        "x_attack": {
+            "name": "Knock Out Beat",
+            "damage": 120,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 152,
+        "name": "Starmon",
+        "support": "If opponent's Specialty is Darkness, opponent's Support Effect is voided.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 900,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Meteor Stream",
+            "damage": 470
+        },
+        "t_attack": {
+            "name": "Hypnotizer",
+            "damage": 370
+        },
+        "x_attack": {
+            "name": "Star Seeker",
+            "damage": 230,
+            "effect": "Darkness Foe x3"
+        }
+    },
+    {
+        "id": 153,
+        "name": "Thundermon",
+        "support": "If opponent used [X], discard all Cards in opponent's Hand.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 710,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Thunder Volt",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Thunder Bomber",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Intercepting Bomb",
+            "damage": 0,
+            "effect": "[X] Counter"
+        }
+    },
+    {
+        "id": 154,
+        "name": "PlatinumSukamon",
+        "support": "Move the top Card from Offline Pile to Online Deck.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 850,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Metal Bomber",
+            "damage": 240
+        },
+        "t_attack": {
+            "name": "Slippery Sludge",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Metalic Guard",
+            "damage": 100,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 155,
+        "name": "ShellNumemon",
+        "support": "Discard opponent's top DP Card shown in DP Slot.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 900,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Shell's Attack",
+            "damage": 250
+        },
+        "t_attack": {
+            "name": "Pouring Poop",
+            "damage": 150
+        },
+        "x_attack": {
+            "name": "Mighty Magic",
+            "damage": 150,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 156,
+        "name": "Nanimon",
+        "support": "Return all Cards in own Hand to Online Deck and Shuffle.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 700,
+        "dp": 30,
+        "pp": 0,
+        "c_attack": {
+            "name": "Power Punch",
+            "damage": 390
+        },
+        "t_attack": {
+            "name": "Exploding Punch",
+            "damage": 270
+        },
+        "x_attack": {
+            "name": "Dark Spell",
+            "damage": 0,
+            "effect": "[X] Counter"
+        }
+    },
+    {
+        "id": 157,
+        "name": "Numemon",
+        "support": "Discard opponent's 2 top DP Cards in his DP Slot.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 700,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Party Time",
+            "damage": 250
+        },
+        "t_attack": {
+            "name": "Filth Kick",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Hyper Stink Shot",
+            "damage": 100,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 158,
+        "name": "Sukamon",
+        "support": "Discard 1 Card from opponent's Hand at random.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 600,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Poop Blast",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Poop Punch",
+            "damage": 150
+        },
+        "x_attack": {
+            "name": "Quick Poop Shot",
+            "damage": 200,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 159,
+        "name": "Rockmon",
+        "support": "Discard 3 Cards from opponent's Online Deck.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 700,
+        "dp": 40,
+        "pp": 10,
+        "c_attack": {
+            "name": "Guardian Bomb",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Anti-Digi Beam",
+            "damage": 160
+        },
+        "x_attack": {
+            "name": "Gigantic Press",
+            "damage": 250,
+            "effect": "Rare Foe x3"
+        }
+    },
+    {
+        "id": 160,
+        "name": "Geremon",
+        "support": "Discard all Cards in DP Slot. Foe discards same number of DP Cards.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 690,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Dirty Puddle",
+            "damage": 280
+        },
+        "t_attack": {
+            "name": "Hyper Stink",
+            "damage": 330
+        },
+        "x_attack": {
+            "name": "Polka Dots",
+            "damage": 120,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 161,
+        "name": "NiseDrimogemon",
+        "support": "Opponent uses [T].",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 750,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Bogus Iron Drill Spin",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Bogus Bone",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Fake Special Attack",
+            "damage": 220,
+            "effect": "Rare Foe x3"
+        }
+    },
+    {
+        "id": 162,
+        "name": "ShimaUnimon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 800,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Striped Blaster",
+            "damage": 430
+        },
+        "t_attack": {
+            "name": "Wild Thunder",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Mirage Dance",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 163,
+        "name": "MudFrigimon",
+        "support": "None",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 930,
+        "dp": 30,
+        "pp": 10,
+        "c_attack": {
+            "name": "Heavy Punch",
+            "damage": 480
+        },
+        "t_attack": {
+            "name": "Mad Rocker",
+            "damage": 360
+        },
+        "x_attack": {
+            "name": "Piece of Earth",
+            "damage": 320,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 164,
+        "name": "SandYanmamon",
+        "support": "Opponent uses [C]. Lower opponent's Attack Power -100.",
+        "level": "C",
+        "specialty": "Rare",
+        "hp": 600,
+        "dp": 20,
+        "pp": 10,
+        "c_attack": {
+            "name": "Desert Storm",
+            "damage": 250
+        },
+        "t_attack": {
+            "name": "Flying Breaker",
+            "damage": 340
+        },
+        "x_attack": {
+            "name": "Bottom Cutter",
+            "damage": 210,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 165,
+        "name": "L-ToyAgumon",
+        "support": "If 1 or less Cards left in own Hand, opponent's Attack Power goes to 0.",
+        "level": "R",
+        "specialty": "Rare",
+        "hp": 590,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Toy Flame",
+            "damage": 270
+        },
+        "t_attack": {
+            "name": "Million Punches",
+            "damage": 210
+        },
+        "x_attack": {
+            "name": "Fancy Star",
+            "damage": 180,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 166,
+        "name": "Hagurumon",
+        "support": "Discard all Cards in DP Slot. Recover HP, mumber of discards x100.",
+        "level": "R",
+        "specialty": "Rare",
+        "hp": 500,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Darkness Gear",
+            "damage": 240
+        },
+        "t_attack": {
+            "name": "Command Input",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Crash Device",
+            "damage": 0,
+            "effect": "Crash"
+        }
+    },
+    {
+        "id": 167,
+        "name": "ToyAgumon",
+        "support": "Discard 1 Card at random from own Hand. HP of both Players are 200.",
+        "level": "R",
+        "specialty": "Rare",
+        "hp": 530,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Toy Flame",
+            "damage": 280
+        },
+        "t_attack": {
+            "name": "Million Punches",
+            "damage": 130
+        },
+        "x_attack": {
+            "name": "Fancy Star",
+            "damage": 0,
+            "effect": "[T] Counter"
+        }
+    },
+    {
+        "id": 168,
+        "name": "ClearAgumon",
+        "support": "Opponent's Support Effect is voided.",
+        "level": "R",
+        "specialty": "Rare",
+        "hp": 580,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Precious Flame",
+            "damage": 270
+        },
+        "t_attack": {
+            "name": "Dream Missile",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Wonder Light",
+            "damage": 50,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 169,
+        "name": "Vi-Elecmon",
+        "support": "None",
+        "level": "R",
+        "specialty": "Rare",
+        "hp": 620,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Jamming Thunder",
+            "damage": 260
+        },
+        "t_attack": {
+            "name": "Dark Tail",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Assassin Bolt",
+            "damage": 190,
+            "effect": "Rare Foe x3"
+        }
+    },
+    {
+        "id": 170,
+        "name": "Psychemon",
+        "support": "Own HP become same as opponent's.",
+        "level": "R",
+        "specialty": "Rare",
+        "hp": 470,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Colored Sparkle",
+            "damage": 250
+        },
+        "t_attack": {
+            "name": "Glittering Horn",
+            "damage": 120
+        },
+        "x_attack": {
+            "name": "Colorful Dance",
+            "damage": 90,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 171,
+        "name": "ModokiBetamon",
+        "support": "Opponent's HP become same as own. Own Attack Power becomes 0.",
+        "level": "R",
+        "specialty": "Rare",
+        "hp": 550,
+        "dp": 0,
+        "pp": 10,
+        "c_attack": {
+            "name": "Electric Shock",
+            "damage": 120
+        },
+        "t_attack": {
+            "name": "Blade Fin",
+            "damage": 280
+        },
+        "x_attack": {
+            "name": "Aqua Tower",
+            "damage": 190,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 172,
+        "name": "Flamedramon",
+        "support": "Boost own Attack Power +100. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Fire",
+        "hp": 600,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Fire Rocket",
+            "damage": 500
+        },
+        "t_attack": {
+            "name": "Knuckle Fire",
+            "damage": 350
+        },
+        "x_attack": {
+            "name": "Express Claw",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 173,
+        "name": "Magnamon",
+        "support": "Boost own Attack Power by +100. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Fire",
+        "hp": 650,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Plasma Shot",
+            "damage": 550
+        },
+        "t_attack": {
+            "name": "Plasma Blast",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Aura Barrier",
+            "damage": 200,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 174,
+        "name": "Baronmon",
+        "support": "If foe's Specialty is Darkness, own Attack Power is Doubled. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Fire",
+        "hp": 600,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Dancing Meteor",
+            "damage": 550
+        },
+        "t_attack": {
+            "name": "Pyrokinesis",
+            "damage": 450
+        },
+        "x_attack": {
+            "name": "White Spell",
+            "damage": 150,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 175,
+        "name": "Veemon",
+        "support": "Boost own Attack Power +100. Draw 1 Card.",
+        "level": "",
+        "specialty": "Fire",
+        "hp": 550,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Vee Head Butt",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Boom Boom Punch",
+            "damage": 280
+        },
+        "x_attack": {
+            "name": "Hopping Kick",
+            "damage": 200,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 176,
+        "name": "Submarimon",
+        "support": "Discard 2 Cards from opponent's Online Deck. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Ice",
+        "hp": 850,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Submarine Attack",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Hydro Jet",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "OXY Homing Missile",
+            "damage": 200,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 177,
+        "name": "Quetzalmon",
+        "support": "Lower Opponent's Attack Power -100. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Ice",
+        "hp": 800,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Freezing Wave",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Toltec Wind",
+            "damage": 350
+        },
+        "x_attack": {
+            "name": "Cold and Clammy",
+            "damage": 0,
+            "effect": "[X] Counter"
+        }
+    },
+    {
+        "id": 178,
+        "name": "Tylomon",
+        "support": "Change own Specialty to Nature. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Ice",
+        "hp": 900,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Torpedo Attack",
+            "damage": 350
+        },
+        "t_attack": {
+            "name": "Heavy Anchor",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Eraser Beam",
+            "damage": 250,
+            "effect": "Fire Foe x3"
+        }
+    },
+    {
+        "id": 179,
+        "name": "Halsemon",
+        "support": "Draw 3 Cards.",
+        "level": "A",
+        "specialty": "Nature",
+        "hp": 700,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Tempest Wing",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Red Sun",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Evil Gaze",
+            "damage": 250,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 180,
+        "name": "Pegasusmon",
+        "support": "If foe's Specialty is Nature, own Attack Power is doubled. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Nature",
+        "hp": 750,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Star Shower",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Rodeo Kick",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Needle Rain",
+            "damage": 200,
+            "effect": "1st Attack"
+        }
+    },
+    {
+        "id": 181,
+        "name": "Nefertimon",
+        "support": "Change own Specialty to Nature. Draw 1 card.",
+        "level": "A",
+        "specialty": "Nature",
+        "hp": 650,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Rocking Stone",
+            "damage": 500
+        },
+        "t_attack": {
+            "name": "Egyptian Fire",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Queen's Curse",
+            "damage": 200,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 182,
+        "name": "Hawkmon",
+        "support": "Draw 3 Cards.",
+        "level": "",
+        "specialty": "Nature",
+        "hp": 600,
+        "dp": 0,
+        "pp": 30,
+        "c_attack": {
+            "name": "Hawk Beam",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Pecking Beak",
+            "damage": 220
+        },
+        "x_attack": {
+            "name": "Hawk Claw",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 183,
+        "name": "Patamon",
+        "support": "If foe's Specialty is Darkness, own Attack Power is doubled. Draw 1 Card.",
+        "level": "",
+        "specialty": "Nature",
+        "hp": 630,
+        "dp": 0,
+        "pp": 30,
+        "c_attack": {
+            "name": "Boom Bubble",
+            "damage": 370
+        },
+        "t_attack": {
+            "name": "Pretty Attack",
+            "damage": 170
+        },
+        "x_attack": {
+            "name": "Intercepting Air Shot",
+            "damage": 0,
+            "effect": "[C] Counter"
+        }
+    },
+    {
+        "id": 184,
+        "name": "Gatomon",
+        "support": "Change own Specialty to Nature. Draw 1 Card.",
+        "level": "",
+        "specialty": "Nature",
+        "hp": 600,
+        "dp": 0,
+        "pp": 30,
+        "c_attack": {
+            "name": "Lightning Paw",
+            "damage": 290
+        },
+        "t_attack": {
+            "name": "Lightning Kick",
+            "damage": 200
+        },
+        "x_attack": {
+            "name": "Cat's Eyes",
+            "damage": 0,
+            "effect": "[T] Counter"
+        }
+    },
+    {
+        "id": 185,
+        "name": "Raidramon",
+        "support": "Boost own Attack Power by +100. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Darkness",
+        "hp": 650,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Lightning Blast",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Electric Byte",
+            "damage": 300
+        },
+        "x_attack": {
+            "name": "Lightning Blade",
+            "damage": 400,
+            "effect": "[T] to 0"
+        }
+    },
+    {
+        "id": 186,
+        "name": "Shadramon",
+        "support": "Lower Opponent's Attack Power -100. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Darkness",
+        "hp": 650,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Flare Buster",
+            "damage": 500
+        },
+        "t_attack": {
+            "name": "Serrated Screw",
+            "damage": 350
+        },
+        "x_attack": {
+            "name": "Psychic Wave",
+            "damage": 150,
+            "effect": "Jamming"
+        }
+    },
+    {
+        "id": 187,
+        "name": "Wormmon",
+        "support": "Lower Opponent's Attack Power -100. Draw 1 Card.",
+        "level": "",
+        "specialty": "Darkness",
+        "hp": 550,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Sticky Net",
+            "damage": 300
+        },
+        "t_attack": {
+            "name": "Silk Thread",
+            "damage": 250
+        },
+        "x_attack": {
+            "name": "Random Roll",
+            "damage": 170,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 188,
+        "name": "Shurimon",
+        "support": "Draw 3 Cards.",
+        "level": "A",
+        "specialty": "Rare",
+        "hp": 600,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Double Stars",
+            "damage": 450
+        },
+        "t_attack": {
+            "name": "Burning Chili Pepper",
+            "damage": 350
+        },
+        "x_attack": {
+            "name": "Jumping Drill",
+            "damage": 250,
+            "effect": "[X] to 0"
+        }
+    },
+    {
+        "id": 189,
+        "name": "Digmon",
+        "support": "Discard 2 Cards from opponent's Online Deck. Draw 1 Card.",
+        "level": "A",
+        "specialty": "Rare",
+        "hp": 800,
+        "dp": 0,
+        "pp": 0,
+        "c_attack": {
+            "name": "Gold Rush",
+            "damage": 400
+        },
+        "t_attack": {
+            "name": "Powerful Cracker",
+            "damage": 400
+        },
+        "x_attack": {
+            "name": "Titanic Drill",
+            "damage": 400,
+            "effect": "None"
+        }
+    },
+    {
+        "id": 190,
+        "name": "Armadillomon",
+        "support": "Discard 2 Cards from opponent's Online Deck. Draw 1 Card.",
+        "level": "",
+        "specialty": "Rare",
+        "hp": 650,
+        "dp": 0,
+        "pp": 20,
+        "c_attack": {
+            "name": "Diamond Shell",
+            "damage": 280
+        },
+        "t_attack": {
+            "name": "Beat Blaster",
+            "damage": 240
+        },
+        "x_attack": {
+            "name": "Hard Brick",
+            "damage": 190,
+            "effect": "[C] to 0"
+        }
+    },
+    {
+        "id": 191,
+        "name": "Golden Banana",
+        "support": "Own HP are halved. Counterattack. Attack second."
+    },
+    {
+        "id": 192,
+        "name": "Devil's Chip",
+        "support": "Discard 1 Card from own Hand. Boost both players' Attack Power +600."
+    },
+    {
+        "id": 193,
+        "name": "Whistle",
+        "support": "If own Level is below opponent's, opponent's Attack Power becomes 0."
+    },
+    {
+        "id": 194,
+        "name": "Giga Hand",
+        "support": "Discard 7 Cards from Online Deck. Own Attack Power is same as own HP."
+    },
+    {
+        "id": 195,
+        "name": "Metallic Banana",
+        "support": "Own HP are halved. Opponent's Attack Power becomes 0."
+    },
+    {
+        "id": 196,
+        "name": "Shining Mane",
+        "support": "If opponent's HP are more than 1000, opponent's HP are halved."
+    },
+    {
+        "id": 197,
+        "name": "Mega Rec. Floppy",
+        "support": "Discard 7 Cards from own Online Deck. Recover own HP by +1000."
+    },
+    {
+        "id": 198,
+        "name": "Mega Attack Chip",
+        "support": "Discard 7 Cards from own Online Deck. Boost own Attack Power +500."
+    },
+    {
+        "id": 199,
+        "name": "Dark Lord's Cape",
+        "support": "If opponent's HP is less than own, boost own Attack Power +400."
+    },
+    {
+        "id": 200,
+        "name": "Fake Sevens",
+        "support": "None"
+    },
+    {
+        "id": 201,
+        "name": "Net Worm",
+        "support": "If both players use same Attack, discard all Cards in foe's Hand."
+    },
+    {
+        "id": 202,
+        "name": "Missile Pod",
+        "support": "Discard all Cards in own Hand. Own Attack Power is doubled."
+    },
+    {
+        "id": 203,
+        "name": "Shogun's Order",
+        "support": "Both players' Attack Power becomes 0."
+    },
+    {
+        "id": 204,
+        "name": "Beetle Diamond",
+        "support": "Attack first. Boost own Attack Power +100."
+    },
+    {
+        "id": 205,
+        "name": "Dark Bone",
+        "support": "Own attack becomes \"Eat-up HP.\""
+    },
+    {
+        "id": 206,
+        "name": "Red Digivice",
+        "support": "If own Specialty is Fire, boost own Attack Power +100, recover HP +200."
+    },
+    {
+        "id": 207,
+        "name": "Blue Digivice",
+        "support": "If own Specialty is Ice, boost own Attack Power +100, recover HP +200."
+    },
+    {
+        "id": 208,
+        "name": "Green Digivice",
+        "support": "If own Specialty is Nature, boost own Attack Power +100, recover HP +200."
+    },
+    {
+        "id": 209,
+        "name": "Black Digivice",
+        "support": "If own Specialty is Darkness, boost own Attack Power +100, recover HP +200."
+    },
+    {
+        "id": 210,
+        "name": "Yellow Digivice",
+        "support": "If own Specialty is Rare, boost own Attack Power +100, recover HP +200."
+    },
+    {
+        "id": 211,
+        "name": "Pink Digivice",
+        "support": "If Specialties are same, boost own Attack Power +200, recover HP +400."
+    },
+    {
+        "id": 212,
+        "name": "Another Dimension",
+        "support": "Discard 7 Cards from both players' Online Decks."
+    },
+    {
+        "id": 213,
+        "name": "UnInstall",
+        "support": "If both Attacks are same, discard 7 Cards from foe's Online Deck."
+    },
+    {
+        "id": 214,
+        "name": "Evil Program",
+        "support": "Discard 1 Card in own DP Slot. Discard all foe's Cards in DP Slot."
+    },
+    {
+        "id": 215,
+        "name": "Coliseum",
+        "support": "Both players' attacks become [C]. Boost own [C] Attack Power +100."
+    },
+    {
+        "id": 216,
+        "name": "Fire Altar",
+        "support": "Changes opponent's Specialty to Fire. Draw 1 Card from own Online Deck."
+    },
+    {
+        "id": 217,
+        "name": "Ice Altar",
+        "support": "Changes opponent's Specialty to Ice. Draw 1 Card from own Online Deck."
+    },
+    {
+        "id": 218,
+        "name": "Nature Altar",
+        "support": "Changes opponent's Specialty to Nature. Draw 1 Card from own Online Deck."
+    },
+    {
+        "id": 219,
+        "name": "Darkness Altar",
+        "support": "Changes opponent's Specialty to Darkness. Draw 1 Card from own Online Deck."
+    },
+    {
+        "id": 220,
+        "name": "Rare Altar",
+        "support": "Changes opponent's Specialty to Rare. Draw 1 Card from own Online Deck."
+    },
+    {
+        "id": 221,
+        "name": "Sup. Rec. Floppy",
+        "support": "If own HP are less than foe's HP, recovcer own HP by +700."
+    },
+    {
+        "id": 222,
+        "name": "Mega Def. Disk \u25cb",
+        "support": "Opponent's [C] Attack Power goes to 0. Recover own HP by +100."
+    },
+    {
+        "id": 223,
+        "name": "Mega Def. Disk \u25b3",
+        "support": "Opponent's [T] Attack Power goes to 0. Recover own HP by +100."
+    },
+    {
+        "id": 224,
+        "name": "Mega Def. Disk \u00d7",
+        "support": "Opponent's [X] Attack Power goes to 0. Recover own HP by +100."
+    },
+    {
+        "id": 225,
+        "name": "Heap of Junk",
+        "support": "Opponent discards 2 Cards from his Online Deck and 1 Card from Hand."
+    },
+    {
+        "id": 226,
+        "name": "Beam Gun",
+        "support": "Own Attack Power becomes 0. Opponent's HP are halved."
+    },
+    {
+        "id": 227,
+        "name": "Chain Saw",
+        "support": "Make own HP 10. Own Attack Power is tripled."
+    },
+    {
+        "id": 228,
+        "name": "Metal Parts",
+        "support": "Discard own Hand. Multiply own Attack Power by number of discarded Cards."
+    },
+    {
+        "id": 229,
+        "name": "Metal Armor",
+        "support": "Discard own DP Slot Cards. Multiply own Attack Power by number of discards."
+    },
+    {
+        "id": 230,
+        "name": "Mega Hand",
+        "support": "Own Attack Power matches own HP, then own HP are halved."
+    },
+    {
+        "id": 231,
+        "name": "Level Balancer",
+        "support": "If own Level is R, boost own Attack Power +400."
+    },
+    {
+        "id": 232,
+        "name": "Level Manager",
+        "support": "If own Level is C, boost own Attack Power +400."
+    },
+    {
+        "id": 233,
+        "name": "Level Booster",
+        "support": "If own Level is U, boost own Attack Power +400."
+    },
+    {
+        "id": 234,
+        "name": "Armor Clash",
+        "support": "If opponent is Level A, his Atk Pwr becomes 0 and own Atk Pwr is doubled."
+    },
+    {
+        "id": 235,
+        "name": "Silver Ball",
+        "support": "If opponent is Level U, his Atk Pwr becomes 0 and own Atk Pwr is doubled."
+    },
+    {
+        "id": 236,
+        "name": "Coral Charm",
+        "support": "If foe's Specialty is Fire or Ice, his Attack Power goes to 0."
+    },
+    {
+        "id": 237,
+        "name": "Patch of Love",
+        "support": "If foe's Specialty is Nature or Darkness, his Attack Power goes to 0."
+    },
+    {
+        "id": 238,
+        "name": "Mystery Egg",
+        "support": "Changes both players' Specialties to Rare."
+    },
+    {
+        "id": 239,
+        "name": "Miracle Ruby",
+        "support": "KO'd Digimon revives with 1000. Battle is still lost."
+    },
+    {
+        "id": 240,
+        "name": "Cyber Parts",
+        "support": "If both Attacks are same, own Attack Power is tripled."
+    },
+    {
+        "id": 241,
+        "name": "Liquid Crystal",
+        "support": "If both players use same attack, opponent's Attack Power becomes 0."
+    },
+    {
+        "id": 242,
+        "name": "Deluxe Mushroom",
+        "support": "If both players use same Attack, recover own HP +700."
+    },
+    {
+        "id": 243,
+        "name": "Lucky Mushroom",
+        "support": "If both Attacks are different, recover own HP by +500."
+    },
+    {
+        "id": 244,
+        "name": "Premium Steak",
+        "support": "Recover own HP by +500. Recover foe's HP by +200."
+    },
+    {
+        "id": 245,
+        "name": "Short Lance",
+        "support": "If both attacks are different, own Attack Power is doubled."
+    },
+    {
+        "id": 246,
+        "name": "Med. Rec. Floppy",
+        "support": "Own Attack Power is halved. Recover own HP by +500."
+    },
+    {
+        "id": 247,
+        "name": "Digimon Analyzer",
+        "support": "Move top 3 Cards from Offline Pile to Online Deck and shuffle."
+    },
+    {
+        "id": 248,
+        "name": "Training Manual",
+        "support": "Draw until there are 4 Cards in own Hand. Recover own HP by +100."
+    },
+    {
+        "id": 249,
+        "name": "Circle Hitter",
+        "support": "If opponent uses [C], attack first and boost own Attack Power +500."
+    },
+    {
+        "id": 250,
+        "name": "Triangle Hitter",
+        "support": "If opponent uses [T], attack first and boost own Attack Power +500."
+    },
+    {
+        "id": 251,
+        "name": "Cross Hitter",
+        "support": "If opponent uses [X], attack first and boost own Attack Power +500."
+    },
+    {
+        "id": 252,
+        "name": "Suka's Curse",
+        "support": "Opponent discards 2 Cards at random from his Hand."
+    },
+    {
+        "id": 253,
+        "name": "Cherrymon's Mist",
+        "support": "Opponent's Support and Option Effects are voided."
+    },
+    {
+        "id": 254,
+        "name": "Hacking",
+        "support": "If own Level is lower, switch HP with opponent."
+    },
+    {
+        "id": 255,
+        "name": "Digimon Grave",
+        "support": "Opponent discards 4 top Cards from Online Deck."
+    },
+    {
+        "id": 256,
+        "name": "Data Copy",
+        "support": "Own Attack Power, HP, and Specialty become same as the opponent's."
+    },
+    {
+        "id": 257,
+        "name": "Partner Finder",
+        "support": "Pick Partner Card from own Online Deck at random and put in own Hand."
+    },
+    {
+        "id": 258,
+        "name": "Fire Spot",
+        "support": "Change own Specialty to Fire. Boost own Attack Power +200."
+    },
+    {
+        "id": 259,
+        "name": "Ice Crystal",
+        "support": "Change own Specialty to Ice. Recover own HP by +200."
+    },
+    {
+        "id": 260,
+        "name": "Earth Charm",
+        "support": "Change own Specialty to Nature. Attack first."
+    },
+    {
+        "id": 261,
+        "name": "Black Gear",
+        "support": "Change own Specialty to Darkness. Both players' HP are halved."
+    },
+    {
+        "id": 262,
+        "name": "Stuffed Animal",
+        "support": "Change own Specialty to Rare. Opponent discards 1 Card at random."
+    },
+    {
+        "id": 263,
+        "name": "Disrupt Ray",
+        "support": "Opponent's attack changes from [C] to [T], [T] to [X], or [X] to [C]."
+    },
+    {
+        "id": 264,
+        "name": "Attack Chip",
+        "support": "Boost own Attack Power +300."
+    },
+    {
+        "id": 265,
+        "name": "High Speed Disk",
+        "support": "Randomly discard 1 Card from own Hand. Opponent's Attack Power is 0."
+    },
+    {
+        "id": 266,
+        "name": "Recovery Floppy",
+        "support": "Recover own HP by +300."
+    },
+    {
+        "id": 267,
+        "name": "Attack Disk [C]",
+        "support": "Own [C] Attack Power is doubled."
+    },
+    {
+        "id": 268,
+        "name": "Attack Disk [T]",
+        "support": "Own [T] Attack Power is doubled."
+    },
+    {
+        "id": 269,
+        "name": "Attack Disk [X]",
+        "support": "Own [X] Attack Power is doubled."
+    },
+    {
+        "id": 270,
+        "name": "Defense Disk [C]",
+        "support": "Opponent's [C] Attack Power is 0."
+    },
+    {
+        "id": 271,
+        "name": "Defense Disk [T]",
+        "support": "Opponent's [T] Attack Power is 0."
+    },
+    {
+        "id": 272,
+        "name": "Defense Disk [X]",
+        "support": "Opponent's [X] Attack Power is 0."
+    },
+    {
+        "id": 273,
+        "name": "Digi-Garnet",
+        "support": "Boost own Attack Power +100."
+    },
+    {
+        "id": 274,
+        "name": "Digi-Amethyst",
+        "support": "Recover own HP by +100."
+    },
+    {
+        "id": 275,
+        "name": "Digi-Aquamarine",
+        "support": "KO'd Digimon revives with 100 HP. Battle is still lost."
+    },
+    {
+        "id": 276,
+        "name": "Digi-Diamond",
+        "support": "Draw 2 Cards from Online Deck."
+    },
+    {
+        "id": 277,
+        "name": "Digi-Emerald",
+        "support": "Change own Specialty to Nature."
+    },
+    {
+        "id": 278,
+        "name": "Digi-Pearl",
+        "support": "Changes own Specialty to Rare."
+    },
+    {
+        "id": 279,
+        "name": "Digi-Ruby",
+        "support": "Changes own Specialty to Fire."
+    },
+    {
+        "id": 280,
+        "name": "Digi-Sardnyx",
+        "support": "Change own Specialty to Darkness."
+    },
+    {
+        "id": 281,
+        "name": "Digi-Sapphire",
+        "support": "Change own Specialty to Ice."
+    },
+    {
+        "id": 282,
+        "name": "Digi-Opal",
+        "support": "Own attack becomes [C]."
+    },
+    {
+        "id": 283,
+        "name": "Digi-Topaz",
+        "support": "Own attack becomes [T]."
+    },
+    {
+        "id": 284,
+        "name": "Digi-Turquoise",
+        "support": "Own attack becomes [X]."
+    },
+    {
+        "id": 285,
+        "name": "Wild Sevens",
+        "support": "Own Attack Power is tripled."
+    },
+    {
+        "id": 286,
+        "name": "Holy Sevens",
+        "support": "Recover own HP by +1000."
+    },
+    {
+        "id": 287,
+        "name": "Dark Sevens",
+        "support": "If opponent's HP are lower then own, opponent's HP become 10."
+    },
+    {
+        "id": 288,
+        "name": "Grand Sevens",
+        "support": "Own Attack Power is boosted by the number of own HP."
+    },
+    {
+        "id": 289,
+        "name": "Mystic Sevens",
+        "support": "Opponent's Support and Option Effects are voided. His Attack Power is 0."
+    },
+    {
+        "id": 290,
+        "name": "Speed Sevens",
+        "support": "Attack first. Own attack becomes \"Eat-up HP.\" Boost Attack Power +200."
+    },
+    {
+        "id": 291,
+        "name": "Reverse Sevens",
+        "support": "Move top 10 Cards from Offline Pile to Online Deck, then shuffle."
+    },
+    {
+        "id": 292,
+        "name": "Rosemon's Lure",
+        "support": "Opponent discards his Hand and all Cards in his DP Slot."
+    },
+    {
+        "id": 293,
+        "name": "Download Digivolve",
+        "support": "Can digivolve regardless of own Specialty, Level, or Digivolve Pts."
+    },
+    {
+        "id": 294,
+        "name": "ArmorCrush Digivolve",
+        "support": "Digivolve a Level A Digimon to C or U. (DP are needed.)"
+    },
+    {
+        "id": 295,
+        "name": "Special Digivolve",
+        "support": "Can digivolve regardless of own Specialty by adding DP +20."
+    },
+    {
+        "id": 296,
+        "name": "Mutant Digivolve",
+        "support": "Can digivolve Digimon at same Level. (Need DP) (Ignore Specialty)"
+    },
+    {
+        "id": 297,
+        "name": "Warp Digivolve",
+        "support": "Can digivolve from R to U. (DP are needed.)"
+    },
+    {
+        "id": 298,
+        "name": "De-Armor Digivolve",
+        "support": "Downgrade a Level A Digimon to Level R."
+    },
+    {
+        "id": 299,
+        "name": "Speed Digivolve",
+        "support": "Can disregard DP in digivolving. (Not possible in Abnormal states)"
+    },
+    {
+        "id": 300,
+        "name": "Digi-devolve",
+        "support": "DownGrade own digivolution by 1 Level. HP double when successful."
+    }
+]
